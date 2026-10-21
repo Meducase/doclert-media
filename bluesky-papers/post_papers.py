@@ -184,14 +184,30 @@ def publish(posts):
     session = get_json(BSKY + "com.atproto.server.createSession", body, {"Content-Type": "application/json"})
     root = parent = None
     uris = []
-    for text, links in posts:
-        reply = {"root": root, "parent": parent} if root else None
-        ref = bsky_post(session, text, links, reply)
-        ref = {"uri": ref["uri"], "cid": ref["cid"]}
-        root, parent = root or ref, ref
-        uris.append(ref["uri"])
-        time.sleep(1)
+    try:
+        for text, links in posts:
+            reply = {"root": root, "parent": parent} if root else None
+            ref = bsky_post(session, text, links, reply)
+            ref = {"uri": ref["uri"], "cid": ref["cid"]}
+            root, parent = root or ref, ref
+            uris.append(ref["uri"])
+            time.sleep(1)
+    except Exception:
+        for uri in reversed(uris):  # never leave half a thread up
+            bsky_delete(session, uri)
+        raise
     return uris
+
+
+def bsky_delete(session, uri):
+    rkey = uri.rsplit("/", 1)[-1]
+    body = json.dumps({"repo": session["did"], "collection": "app.bsky.feed.post", "rkey": rkey}).encode()
+    try:
+        get_json(BSKY + "com.atproto.repo.deleteRecord", body, {
+            "Content-Type": "application/json", "Authorization": "Bearer " + session["accessJwt"],
+        })
+    except Exception as e:  # report and go on deleting the rest
+        print("could not delete", uri, e, file=sys.stderr)
 
 
 def load_state():
