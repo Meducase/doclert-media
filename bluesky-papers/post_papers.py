@@ -9,8 +9,9 @@ abstract, no author names, no text written by AI (DATA-RIGHTS tier 1 without the
 Modes (config.json "mode", or --mode):
   off      do nothing
   preview  render and print, never post (default; also what a push to a branch runs)
-  live     post to Bluesky, only from config "start" on and only with BLUESKY_HANDLE and
-           BLUESKY_APP_PASSWORD set; writes state/posted.json so a paper is never posted twice
+  live     post to Bluesky as config "handle", only from config "start" on and only with the
+           BLUESKY_APP_PASSWORD secret; writes state/posted.json so a paper is never posted twice
+--setup-profile, once after Matt's OK, sets the bio and the pinned post of config "profile".
 
 Standard library only. NCBI: tool and email on every call, two requests a run.
 """
@@ -176,12 +177,41 @@ def bsky_post(session, text, links, reply):
     })
 
 
-def publish(posts):
-    handle, password = os.environ.get("BLUESKY_HANDLE"), os.environ.get("BLUESKY_APP_PASSWORD")
-    if not handle or not password:
-        raise RuntimeError("live mode needs BLUESKY_HANDLE and BLUESKY_APP_PASSWORD")
+def login(cfg):
+    handle = os.environ.get("BLUESKY_HANDLE") or cfg["handle"]
+    password = os.environ.get("BLUESKY_APP_PASSWORD")
+    if not password:
+        raise RuntimeError("posting needs the BLUESKY_APP_PASSWORD secret")
     body = json.dumps({"identifier": handle, "password": password}).encode()
-    session = get_json(BSKY + "com.atproto.server.createSession", body, {"Content-Type": "application/json"})
+    return get_json(BSKY + "com.atproto.server.createSession", body, {"Content-Type": "application/json"})
+
+
+def auth(session):
+    return {"Content-Type": "application/json", "Authorization": "Bearer " + session["accessJwt"]}
+
+
+def setup_profile(cfg):
+    """One time, after Matt's OK: the bio and the pinned post of config "profile"."""
+    session = login(cfg)
+    text = cfg["profile"]["pinned"]
+    assert len(text) <= LIMIT and len(cfg["profile"]["bio"]) <= 256
+    pinned = bsky_post(session, text, [], None)
+    query = urllib.parse.urlencode({"repo": session["did"], "collection": "app.bsky.actor.profile", "rkey": "self"})
+    req = urllib.request.Request(BSKY + "com.atproto.repo.getRecord?" + query, headers=auth(session))
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            record = json.load(r)["value"]
+    except urllib.error.HTTPError:
+        record = {"$type": "app.bsky.actor.profile"}
+    record["description"] = cfg["profile"]["bio"]  # name, avatar and banner stay as they are
+    record["pinnedPost"] = {"uri": pinned["uri"], "cid": pinned["cid"]}
+    body = json.dumps({"repo": session["did"], "collection": "app.bsky.actor.profile", "rkey": "self", "record": record}).encode()
+    get_json(BSKY + "com.atproto.repo.putRecord", body, auth(session))
+    print("bio set, pinned:", pinned["uri"])
+
+
+def publish(cfg, posts):
+    session = login(cfg)
     root = parent = None
     uris = []
     try:
@@ -240,11 +270,15 @@ def main():
     ap.add_argument("--mode", choices=["off", "preview", "live"])
     ap.add_argument("--date", help="YYYY-MM-DD, default today (UTC)")
     ap.add_argument("--week", action="store_true", help="preview all seven topics")
+    ap.add_argument("--setup-profile", action="store_true", help="one time: set the bio and the pinned post")
     args = ap.parse_args()
     with open(os.path.join(HERE, "config.json")) as f:
         cfg = json.load(f)
     mode = args.mode or os.environ.get("PAPERS_MODE_OVERRIDE") or cfg["mode"]
     today = dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(dt.timezone.utc).date()
+    if args.setup_profile:
+        setup_profile(cfg)
+        return 0
     if mode == "off":
         print("mode off: nothing to do")
         return 0
@@ -270,7 +304,7 @@ def main():
     show(today, posts, papers, count)
     if not posts:
         return 0
-    uris = publish(posts)
+    uris = publish(cfg, posts)
     state["posts"].append({"date": today.isoformat(), "pmids": [p["pmid"] for p in papers], "uris": uris})
     save_state(state)
     print("posted:", *uris, sep="\n")

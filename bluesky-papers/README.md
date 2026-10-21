@@ -13,9 +13,12 @@ not fit Bluesky's 300 characters is skipped, never shortened. Fewer than two usa
 Modes (`config.json` "mode"):
 - `preview`: renders and prints, posts nothing. A push to any branch other than `main` previews seven days in
   the Actions run summary.
-- `live`: the scheduled run (13:00 UTC) posts, from "start" on, with the repository variable `BLUESKY_HANDLE`
-  and the secret `BLUESKY_APP_PASSWORD` (a Bluesky app password, never the account password). It records
-  what it posted in `state/posted.json`.
+- `live`: the scheduled run (13:00 UTC) posts as "handle", from "start" on, with the repository secret
+  `BLUESKY_APP_PASSWORD` (a Bluesky app password, never the account password). It records what it posted in
+  `state/posted.json`.
+
+Once, after Matt's OK: run the workflow by hand with "setup_profile" ticked; it sets the bio and posts and pins
+the post of config "profile" (NLM acknowledgement, "not medical advice").
 - `off`: stops everything. Changing the mode is one commit.
 
 Template, topics and wording are approved by Matt (Doclert Marketing). Change them only with his OK.

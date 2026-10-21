@@ -6,6 +6,11 @@ on:
   schedule:
     - cron: "0 13 * * *"
   workflow_dispatch:
+    inputs:
+      setup_profile:
+        description: "One time: set the bio and the pinned post"
+        type: boolean
+        default: false
   push:
     branches-ignore: [main]
     paths: ["bluesky-papers/**", ".github/workflows/bluesky-papers.yml"]
@@ -37,14 +42,18 @@ jobs:
         env:
           PAPERS_DEBUG: "1"
         run: python3 bluesky-papers/post_papers.py --mode preview --week | tee -a "$GITHUB_STEP_SUMMARY"
-      - name: Daily run (mode from config.json)
-        if: github.event_name != 'push'
+      - name: Set the bio and the pinned post (one time, by hand)
+        if: github.event_name == 'workflow_dispatch' && inputs.setup_profile
         env:
-          BLUESKY_HANDLE: ${{ vars.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: python3 bluesky-papers/post_papers.py --setup-profile
+      - name: Daily run (mode from config.json)
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.setup_profile)
+        env:
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         run: python3 bluesky-papers/post_papers.py | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Keep the record of posted papers
-        if: github.event_name != 'push'
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.setup_profile)
         run: |
           git add bluesky-papers/state/posted.json 2>/dev/null || exit 0
           git diff --cached --quiet && exit 0

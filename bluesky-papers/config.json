@@ -3,6 +3,7 @@
   "start": "2026-10-30",
   "post_time_utc": "13:00",
   "network": "bluesky",
+  "handle": "doclert.bsky.social",
   "page": "doclert",
   "papers_per_post": 3,
   "days_back": 7,
@@ -102,5 +103,9 @@
     "JAMA Netw Open",
     "Lancet Public Health",
     "Cochrane Database Syst Rev"
-  ]
+  ],
+  "profile": {
+    "bio": "New medical papers on your own topics, by e-mail, SMS or WhatsApp. Automated daily posts: paper titles and links from PubMed, courtesy of the U.S. National Library of Medicine. Not medical advice. A MEDUCASE product.",
+    "pinned": "Daily: new paper titles on one topic, with the journal and a PubMed link. Titles exactly as in PubMed, nothing written by AI.\n\nCourtesy of the U.S. National Library of Medicine (PubMed). No endorsement by NLM is implied; posts may not reflect PubMed's current data. Not medical advice."
+  }
 }
