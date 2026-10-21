@@ -122,7 +122,7 @@ def head_text(cfg, topic, day, n):
     text = (
         f"New papers on {topic['name']}, {day.day} {MONTHS[day.month - 1]} {day.year}\n\n"
         f"{COUNT_WORDS[n]} recent papers from PubMed, one per reply ↓\n\n"
-        f"New papers on your own topics by e-mail, SMS or WhatsApp: {link}"
+        f"Get new papers on your own topics: {link}"
     )
     return text, [(link, "https://" + link)]
 
