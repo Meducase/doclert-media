@@ -34,6 +34,8 @@ jobs:
           git config "branch.$GITHUB_REF_NAME.merge" "refs/heads/$GITHUB_REF_NAME"
       - name: Preview the next seven days (branch push)
         if: github.event_name == 'push'
+        env:
+          PAPERS_DEBUG: "1"
         run: python3 bluesky-papers/post_papers.py --mode preview --week | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Daily run (mode from config.json)
         if: github.event_name != 'push'

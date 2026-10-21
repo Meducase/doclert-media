@@ -77,6 +77,9 @@ def find_papers(cfg, topic, today, blocked):
         "db": "pubmed", "term": term, "datetype": "edat",
         "reldate": cfg["days_back"], "retmax": 60, "sort": "pub_date",
     })["esearchresult"]
+    if os.environ.get("PAPERS_DEBUG"):
+        print("query:", found.get("querytranslation"), "| errors:", found.get("errorlist"),
+              "| warnings:", found.get("warninglist"), file=sys.stderr)
     ids = [i for i in found.get("idlist", []) if i not in blocked]
     if not ids:
         return [], int(found.get("count", 0))
