@@ -7,14 +7,35 @@
   "papers_per_post": 3,
   "days_back": 7,
   "repeat_block_days": 60,
-  "filters": "jsubsetaim[sb] AND (randomized controlled trial[pt] OR systematic review[pt] OR meta-analysis[pt] OR practice guideline[pt] OR guideline[pt]) AND english[la] NOT (retracted publication[pt] OR retraction of publication[pt] OR expression of concern[pt] OR published erratum[pt] OR comment[pt] OR editorial[pt] OR letter[pt] OR news[pt] OR preprint[pt])",
+  "filters": "jsubsetaim[text] AND (\"randomized controlled trial\"[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt] OR \"practice guideline\"[pt] OR \"guideline\"[pt]) AND english[la] NOT (\"retracted publication\"[pt] OR \"retraction of publication\"[pt] OR \"expression of concern\"[pt] OR \"published erratum\"[pt] OR \"comment\"[pt] OR \"editorial\"[pt] OR \"letter\"[pt] OR \"news\"[pt] OR \"preprint\"[pt])",
   "topics": {
-    "1": {"name": "cardiology", "query": "cardiovascular diseases[mh] OR heart[tiab] OR cardiac[tiab] OR coronary[tiab] OR atrial fibrillation[tiab] OR hypertension[tiab] OR stroke[tiab]"},
-    "2": {"name": "oncology", "query": "neoplasms[mh] OR cancer[tiab] OR tumor[tiab] OR tumour[tiab] OR carcinoma[tiab] OR lymphoma[tiab] OR leukemia[tiab]"},
-    "3": {"name": "infectious diseases", "query": "infections[mh] OR infection[tiab] OR sepsis[tiab] OR antibiotic[tiab] OR antimicrobial[tiab] OR vaccine[tiab] OR HIV[tiab] OR tuberculosis[tiab]"},
-    "4": {"name": "diabetes and endocrinology", "query": "endocrine system diseases[mh] OR diabetes[tiab] OR obesity[tiab] OR thyroid[tiab] OR insulin[tiab] OR GLP-1[tiab]"},
-    "5": {"name": "neurology", "query": "nervous system diseases[mh] OR dementia[tiab] OR Alzheimer[tiab] OR epilepsy[tiab] OR Parkinson[tiab] OR multiple sclerosis[tiab] OR migraine[tiab]"},
-    "6": {"name": "paediatrics", "query": "child[mh] OR infant[mh] OR adolescent[mh] OR children[tiab] OR paediatric[tiab] OR pediatric[tiab] OR neonatal[tiab]"},
-    "7": {"name": "mental health", "query": "mental disorders[mh] OR depression[tiab] OR anxiety[tiab] OR schizophrenia[tiab] OR bipolar[tiab] OR psychiatric[tiab]"}
+    "1": {
+      "name": "cardiology",
+      "query": "cardiovascular diseases[mh] OR heart[tiab] OR cardiac[tiab] OR coronary[tiab] OR atrial fibrillation[tiab] OR hypertension[tiab] OR stroke[tiab]"
+    },
+    "2": {
+      "name": "oncology",
+      "query": "neoplasms[mh] OR cancer[tiab] OR tumor[tiab] OR tumour[tiab] OR carcinoma[tiab] OR lymphoma[tiab] OR leukemia[tiab]"
+    },
+    "3": {
+      "name": "infectious diseases",
+      "query": "infections[mh] OR infection[tiab] OR sepsis[tiab] OR antibiotic[tiab] OR antimicrobial[tiab] OR vaccine[tiab] OR HIV[tiab] OR tuberculosis[tiab]"
+    },
+    "4": {
+      "name": "diabetes and endocrinology",
+      "query": "endocrine system diseases[mh] OR diabetes[tiab] OR obesity[tiab] OR thyroid[tiab] OR insulin[tiab] OR GLP-1[tiab]"
+    },
+    "5": {
+      "name": "neurology",
+      "query": "nervous system diseases[mh] OR dementia[tiab] OR Alzheimer[tiab] OR epilepsy[tiab] OR Parkinson[tiab] OR multiple sclerosis[tiab] OR migraine[tiab]"
+    },
+    "6": {
+      "name": "paediatrics",
+      "query": "child[mh] OR infant[mh] OR adolescent[mh] OR children[tiab] OR paediatric[tiab] OR pediatric[tiab] OR neonatal[tiab]"
+    },
+    "7": {
+      "name": "mental health",
+      "query": "mental disorders[mh] OR depression[tiab] OR anxiety[tiab] OR schizophrenia[tiab] OR bipolar[tiab] OR psychiatric[tiab]"
+    }
   }
 }
