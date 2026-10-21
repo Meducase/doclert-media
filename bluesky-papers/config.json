@@ -7,7 +7,7 @@
   "papers_per_post": 3,
   "days_back": 7,
   "repeat_block_days": 60,
-  "filters": "jsubsetaim[text] AND (\"randomized controlled trial\"[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt] OR \"practice guideline\"[pt] OR \"guideline\"[pt]) AND english[la] NOT (\"retracted publication\"[pt] OR \"retraction of publication\"[pt] OR \"expression of concern\"[pt] OR \"published erratum\"[pt] OR \"comment\"[pt] OR \"editorial\"[pt] OR \"letter\"[pt] OR \"news\"[pt] OR \"preprint\"[pt])",
+  "filters": "(\"randomized controlled trial\"[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt] OR \"practice guideline\"[pt] OR \"guideline\"[pt]) AND english[la] NOT (\"retracted publication\"[pt] OR \"expression of concern\"[pt] OR \"published erratum\"[pt] OR \"comment\"[pt] OR \"editorial\"[pt] OR \"letter\"[pt] OR \"news\"[pt] OR \"preprint\"[pt])",
   "topics": {
     "1": {
       "name": "cardiology",
@@ -37,5 +37,42 @@
       "name": "mental health",
       "query": "mental disorders[mh] OR depression[tiab] OR anxiety[tiab] OR schizophrenia[tiab] OR bipolar[tiab] OR psychiatric[tiab]"
     }
-  }
+  },
+  "journals": [
+    "N Engl J Med",
+    "Lancet",
+    "JAMA",
+    "BMJ",
+    "Ann Intern Med",
+    "Nat Med",
+    "JAMA Intern Med",
+    "Circulation",
+    "Eur Heart J",
+    "J Am Coll Cardiol",
+    "JAMA Cardiol",
+    "Lancet Oncol",
+    "J Clin Oncol",
+    "JAMA Oncol",
+    "Ann Oncol",
+    "Lancet Infect Dis",
+    "Clin Infect Dis",
+    "Lancet HIV",
+    "Lancet Diabetes Endocrinol",
+    "Diabetes Care",
+    "Lancet Neurol",
+    "JAMA Neurol",
+    "Neurology",
+    "Pediatrics",
+    "JAMA Pediatr",
+    "Lancet Child Adolesc Health",
+    "Lancet Psychiatry",
+    "JAMA Psychiatry",
+    "Am J Psychiatry",
+    "Lancet Respir Med",
+    "Gastroenterology",
+    "Lancet Gastroenterol Hepatol",
+    "JAMA Netw Open",
+    "Lancet Public Health",
+    "Cochrane Database Syst Rev"
+  ]
 }

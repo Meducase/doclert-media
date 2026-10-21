@@ -72,7 +72,8 @@ def nice_date(summary):
 
 
 def find_papers(cfg, topic, today, blocked):
-    term = f"({topic['query']}) AND {cfg['filters']}"
+    journals = " OR ".join(f'"{j}"[ta]' for j in cfg["journals"])
+    term = f"({topic['query']}) AND ({journals}) AND {cfg['filters']}"
     found = eutils("esearch.fcgi", {
         "db": "pubmed", "term": term, "datetype": "edat",
         "reldate": cfg["days_back"], "retmax": 60, "sort": "pub_date",
