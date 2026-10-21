@@ -22,7 +22,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out (plain git, no marketplace actions)
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch -q --depth 1 origin "$GITHUB_SHA"
+          git checkout -q -B "$GITHUB_REF_NAME" FETCH_HEAD
+          git branch -q --set-upstream-to "origin/$GITHUB_REF_NAME" 2>/dev/null || git config "branch.$GITHUB_REF_NAME.remote" origin
+          git config "branch.$GITHUB_REF_NAME.merge" "refs/heads/$GITHUB_REF_NAME"
       - name: Preview the next seven days (branch push)
         if: github.event_name == 'push'
         run: python3 bluesky-papers/post_papers.py --mode preview --week | tee -a "$GITHUB_STEP_SUMMARY"
