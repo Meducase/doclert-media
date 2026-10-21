@@ -11,34 +11,87 @@
   "topics": {
     "1": {
       "name": "cardiology",
-      "query": "cardiovascular diseases[mh] OR heart[tiab] OR cardiac[tiab] OR coronary[tiab] OR atrial fibrillation[tiab] OR hypertension[tiab] OR stroke[tiab]"
+      "query": "cardiovascular diseases[mh] OR heart[tiab] OR cardiac[tiab] OR coronary[tiab] OR atrial fibrillation[tiab] OR hypertension[tiab] OR stroke[tiab]",
+      "journals": [
+        "Circulation",
+        "Eur Heart J",
+        "J Am Coll Cardiol",
+        "JAMA Cardiol",
+        "Lancet Cardiol"
+      ],
+      "title_words": "heart|cardi|coronary|atrial|myocard|hypertens|aortic|valv|arrhythm|vascular|statin|cholesterol|lipid"
     },
     "2": {
       "name": "oncology",
-      "query": "neoplasms[mh] OR cancer[tiab] OR tumor[tiab] OR tumour[tiab] OR carcinoma[tiab] OR lymphoma[tiab] OR leukemia[tiab]"
+      "query": "neoplasms[mh] OR cancer[tiab] OR tumor[tiab] OR tumour[tiab] OR carcinoma[tiab] OR lymphoma[tiab] OR leukemia[tiab]",
+      "journals": [
+        "Lancet Oncol",
+        "J Clin Oncol",
+        "JAMA Oncol",
+        "Ann Oncol",
+        "Cancer Cell",
+        "Nat Rev Clin Oncol"
+      ],
+      "title_words": "cancer|tumou?r|carcinoma|lymphoma|leuka?emia|myeloma|melanoma|sarcoma|oncolog|metasta|chemotherap|immunotherap|glioma"
     },
     "3": {
       "name": "infectious diseases",
-      "query": "infections[mh] OR infection[tiab] OR sepsis[tiab] OR antibiotic[tiab] OR antimicrobial[tiab] OR vaccine[tiab] OR HIV[tiab] OR tuberculosis[tiab]"
+      "query": "infections[mh] OR infection[tiab] OR sepsis[tiab] OR antibiotic[tiab] OR antimicrobial[tiab] OR vaccine[tiab] OR HIV[tiab] OR tuberculosis[tiab]",
+      "journals": [
+        "Lancet Infect Dis",
+        "Clin Infect Dis",
+        "Lancet HIV",
+        "Lancet Microbe"
+      ],
+      "title_words": "infect|sepsis|septic|antibiot|antimicrob|vaccin|HIV|tubercul|malaria|influenza|COVID|SARS|viral|virus|bacter|fung|hepatitis|pneumonia"
     },
     "4": {
       "name": "diabetes and endocrinology",
-      "query": "endocrine system diseases[mh] OR diabetes[tiab] OR obesity[tiab] OR thyroid[tiab] OR insulin[tiab] OR GLP-1[tiab]"
+      "query": "endocrine system diseases[mh] OR diabetes[tiab] OR obesity[tiab] OR thyroid[tiab] OR insulin[tiab] OR GLP-1[tiab]",
+      "journals": [
+        "Lancet Diabetes Endocrinol",
+        "Diabetes Care",
+        "Diabetologia",
+        "J Clin Endocrinol Metab"
+      ],
+      "title_words": "diabet|obes|insulin|glyc|thyroid|GLP-1|semaglutide|tirzepatide|adrenal|pituitar|endocrin|metabolic"
     },
     "5": {
       "name": "neurology",
-      "query": "nervous system diseases[mh] OR dementia[tiab] OR Alzheimer[tiab] OR epilepsy[tiab] OR Parkinson[tiab] OR multiple sclerosis[tiab] OR migraine[tiab]"
+      "query": "nervous system diseases[mh] OR dementia[tiab] OR Alzheimer[tiab] OR epilepsy[tiab] OR Parkinson[tiab] OR multiple sclerosis[tiab] OR migraine[tiab]",
+      "journals": [
+        "Lancet Neurol",
+        "JAMA Neurol",
+        "Neurology",
+        "Brain",
+        "Ann Neurol"
+      ],
+      "title_words": "neuro|brain|stroke|dementia|Alzheimer|epilep|seizure|Parkinson|multiple sclerosis|migraine|headache|cognit|encephal|spinal"
     },
     "6": {
       "name": "paediatrics",
-      "query": "child[mh] OR infant[mh] OR adolescent[mh] OR children[tiab] OR paediatric[tiab] OR pediatric[tiab] OR neonatal[tiab]"
+      "query": "child[mh] OR infant[mh] OR adolescent[mh] OR children[tiab] OR paediatric[tiab] OR pediatric[tiab] OR neonatal[tiab]",
+      "journals": [
+        "Pediatrics",
+        "JAMA Pediatr",
+        "Lancet Child Adolesc Health",
+        "Arch Dis Child"
+      ],
+      "title_words": "child|infant|neonat|newborn|paediatric|pediatric|adolescen|preterm|school-age|youth"
     },
     "7": {
       "name": "mental health",
-      "query": "mental disorders[mh] OR depression[tiab] OR anxiety[tiab] OR schizophrenia[tiab] OR bipolar[tiab] OR psychiatric[tiab]"
+      "query": "mental disorders[mh] OR depression[tiab] OR anxiety[tiab] OR schizophrenia[tiab] OR bipolar[tiab] OR psychiatric[tiab]",
+      "journals": [
+        "Lancet Psychiatry",
+        "JAMA Psychiatry",
+        "Am J Psychiatry",
+        "World Psychiatry"
+      ],
+      "title_words": "mental|psychiatr|depress|anxiety|schizophren|bipolar|psychos|suicid|ADHD|autism|substance|alcohol|opioid use|eating disorder|PTSD|psycholog"
     }
   },
-  "journals": [
+  "general_journals": [
     "N Engl J Med",
     "Lancet",
     "JAMA",
@@ -46,31 +99,6 @@
     "Ann Intern Med",
     "Nat Med",
     "JAMA Intern Med",
-    "Circulation",
-    "Eur Heart J",
-    "J Am Coll Cardiol",
-    "JAMA Cardiol",
-    "Lancet Oncol",
-    "J Clin Oncol",
-    "JAMA Oncol",
-    "Ann Oncol",
-    "Lancet Infect Dis",
-    "Clin Infect Dis",
-    "Lancet HIV",
-    "Lancet Diabetes Endocrinol",
-    "Diabetes Care",
-    "Lancet Neurol",
-    "JAMA Neurol",
-    "Neurology",
-    "Pediatrics",
-    "JAMA Pediatr",
-    "Lancet Child Adolesc Health",
-    "Lancet Psychiatry",
-    "JAMA Psychiatry",
-    "Am J Psychiatry",
-    "Lancet Respir Med",
-    "Gastroenterology",
-    "Lancet Gastroenterol Hepatol",
     "JAMA Netw Open",
     "Lancet Public Health",
     "Cochrane Database Syst Rev"

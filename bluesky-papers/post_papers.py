@@ -76,7 +76,8 @@ def nice_date(summary):
 
 
 def find_papers(cfg, topic, today, blocked):
-    journals = " OR ".join(f'"{j}"[ta]' for j in cfg["journals"])
+    journals = " OR ".join(f'"{j}"[ta]' for j in topic["journals"] + cfg["general_journals"])
+    on_topic = re.compile(topic["title_words"], re.I)
     term = f"({topic['query']}) AND ({journals}) AND {cfg['filters']}"
     found = eutils("esearch.fcgi", {
         "db": "pubmed", "term": term, "datetype": "edat",
@@ -96,6 +97,10 @@ def find_papers(cfg, topic, today, blocked):
         journal = (s.get("source") or "").strip()
         if not title or not journal or BLOCKED_TITLE.search(title) or journal in journals:
             continue
+        if "Has Abstract" not in s.get("attributes", []):
+            continue  # news, editorials and commentary rarely have one; research papers do
+        if not on_topic.search(title):
+            continue  # the title itself must name the day's topic
         paper = {"pmid": pmid, "title": title, "journal": journal, "date": nice_date(s)}
         if len(paper_text(paper, 1, 3)) > LIMIT:
             continue  # never shorten a title: skip it
