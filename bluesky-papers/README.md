@@ -2,7 +2,7 @@
 
 A daily thread on Doclert's Bluesky account: "New papers on <topic>", then up to three replies, one per paper.
 One topic per weekday (`config.json` "topics", 1 = Monday). Papers come from PubMed (NLM E-utilities): the
-day's topic, NLM's Core Clinical Journals subset, trials, systematic reviews, meta-analyses and guidelines,
+day's topic, a fixed list of major journals (`config.json` "journals"),
 added in the last 7 days; retractions, errata, comments, letters and editorials left out; one paper per
 journal; a paper is not posted again for 60 days.
 

@@ -7,7 +7,7 @@
   "papers_per_post": 3,
   "days_back": 7,
   "repeat_block_days": 60,
-  "filters": "(\"randomized controlled trial\"[pt] OR \"systematic review\"[pt] OR \"meta-analysis\"[pt] OR \"practice guideline\"[pt] OR \"guideline\"[pt]) AND english[la] NOT (\"retracted publication\"[pt] OR \"expression of concern\"[pt] OR \"published erratum\"[pt] OR \"comment\"[pt] OR \"editorial\"[pt] OR \"letter\"[pt] OR \"news\"[pt] OR \"preprint\"[pt])",
+  "filters": "english[la] NOT (\"retracted publication\"[pt] OR \"expression of concern\"[pt] OR \"published erratum\"[pt] OR \"comment\"[pt] OR \"editorial\"[pt] OR \"letter\"[pt] OR \"news\"[pt] OR \"preprint\"[pt] OR \"portrait\"[pt] OR \"biography\"[pt])",
   "topics": {
     "1": {
       "name": "cardiology",

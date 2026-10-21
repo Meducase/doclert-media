@@ -34,7 +34,7 @@ BSKY = "https://bsky.social/xrpc/"
 LIMIT = 300  # Bluesky graphemes per post
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 COUNT_WORDS = {2: "Two", 3: "Three"}
-BLOCKED_TITLE = re.compile(r"\b(retract|erratum|corrigendum|withdrawn|expression of concern)", re.I)
+BLOCKED_TITLE = re.compile(r"\b(retract|erratum|errata|corrigendum|correction|withdrawn|expression of concern|in memoriam|obituary)", re.I)
 
 
 def get_json(url, data=None, headers=None):
@@ -64,6 +64,10 @@ def clean_title(raw):
 
 
 def nice_date(summary):
+    """The online date when PubMed has one (an issue date can lie weeks ahead), else the publication date."""
+    m = re.match(r"(\d{4}) ([A-Z][a-z]{2}) (\d{1,2})$", (summary.get("epubdate") or "").strip())
+    if m and m.group(2) in MONTHS:
+        return f"{int(m.group(3))} {m.group(2)} {m.group(1)}"
     m = re.match(r"(\d{4})/(\d{2})/(\d{2})", summary.get("sortpubdate", ""))
     if m:
         y, mo, d = (int(x) for x in m.groups())
@@ -111,7 +115,7 @@ def head_text(cfg, topic, day, n):
     link = f"doclert.com/go/{post_id(cfg, day)}"
     text = (
         f"New papers on {topic['name']}, {day.day} {MONTHS[day.month - 1]} {day.year}\n\n"
-        f"{COUNT_WORDS[n]} recent titles from core clinical journals, via PubMed. One per reply ↓\n\n"
+        f"{COUNT_WORDS[n]} recent papers from PubMed, one per reply ↓\n\n"
         f"New papers on your own topics by e-mail, SMS or WhatsApp: {link}"
     )
     return text, [(link, "https://" + link)]
