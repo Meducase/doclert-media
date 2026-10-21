@@ -6,8 +6,9 @@ day's topic in the title, the topic's specialty journals plus a few general ones
 added in the last 7 days; retractions, errata, comments, letters and editorials left out; one paper per
 journal; a paper is not posted again for 60 days.
 
-What a post carries, and nothing more: the title exactly as PubMed gives it, the journal, the date, the
-PubMed link and "Source: PubMed". Never an abstract, author names or text written by AI. A title that would
+What a post carries, and nothing more: the title exactly as PubMed gives it, the journal, the date and a
+link to the paper (DOI, else the PubMed record). Copy never names PubMed (Matt, 21 Oct 2026); NLM's required
+"Courtesy of the U.S. National Library of Medicine" is in the bio and the pinned post. Never an abstract, author names or text written by AI. A title that would
 not fit Bluesky's 300 characters is skipped, never shortened. Fewer than two usable papers: no post that day.
 
 Modes (`config.json` "mode"):

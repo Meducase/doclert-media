@@ -3,8 +3,10 @@
 
 Takes up to three recent papers from PubMed (NLM E-utilities) for the day's topic and renders a
 thread: a head post with the Doclert short link, then one reply per paper with its title exactly as
-PubMed gives it, the journal, the date, the PubMed link and "Source: PubMed". Nothing else: no
-abstract, no author names, no text written by AI (DATA-RIGHTS tier 1 without the author).
+PubMed gives it, the journal, the date and a link to the paper (its DOI, else its PubMed record).
+Nothing else: no abstract, no author names, no text written by AI (DATA-RIGHTS tier 1 without the
+author). Copy never names PubMed (Matt, 21 Oct 2026); NLM's required acknowledgement sits in the bio
+and the pinned post (config "profile").
 
 Modes (config.json "mode", or --mode):
   off      do nothing
@@ -102,7 +104,7 @@ def find_papers(cfg, topic, today, blocked):
             continue  # news, editorials and commentary rarely have one; research papers do
         if not on_topic.search(title):
             continue  # the title itself must name the day's topic
-        paper = {"pmid": pmid, "title": title, "journal": journal, "date": nice_date(s)}
+        paper = {"pmid": pmid, "title": title, "journal": journal, "date": nice_date(s), "doi": doi_of(s)}
         if len(paper_text(paper, 1, 3)) > LIMIT:
             continue  # never shorten a title: skip it
         papers.append(paper)
@@ -121,20 +123,33 @@ def head_text(cfg, topic, day, n):
     link = f"doclert.com/go/{post_id(cfg, day)}"
     text = (
         f"New papers on {topic['name']}, {day.day} {MONTHS[day.month - 1]} {day.year}\n\n"
-        f"{COUNT_WORDS[n]} recent papers from PubMed, one per reply ↓\n\n"
+        f"{COUNT_WORDS[n]} recent papers, one per reply ↓\n\n"
         f"Get new papers on your own topics: {link}"
     )
     return text, [(link, "https://" + link)]
 
 
+def doi_of(summary):
+    for aid in summary.get("articleids", []):
+        if aid.get("idtype") == "doi" and re.match(r"10\.\S+$", aid.get("value", "")):
+            return aid["value"]
+    return None
+
+
+def paper_link(paper):
+    """The paper itself (its DOI) when it has one, else its record page."""
+    if paper.get("doi"):
+        return f"doi.org/{paper['doi']}"
+    return f"pubmed.ncbi.nlm.nih.gov/{paper['pmid']}"
+
+
 def paper_text(paper, i, n):
-    link = f"pubmed.ncbi.nlm.nih.gov/{paper['pmid']}"
-    return f"{i}/{n} {paper['title']}\n\n{paper['journal']} · {paper['date']}\n{link}\nSource: PubMed"
+    return f"{i}/{n} {paper['title']}\n\n{paper['journal']} · {paper['date']}\n{paper_link(paper)}"
 
 
 def paper_post(paper, i, n):
-    link = f"pubmed.ncbi.nlm.nih.gov/{paper['pmid']}"
-    return paper_text(paper, i, n), [(link, f"https://{link}/")]
+    link = paper_link(paper)
+    return paper_text(paper, i, n), [(link, "https://" + link)]
 
 
 def facets(text, links):
