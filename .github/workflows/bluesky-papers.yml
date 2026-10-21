@@ -1,0 +1,41 @@
+name: bluesky-papers
+
+# Daily "New papers on <topic>" thread on Doclert's Bluesky account (bluesky-papers/README.md).
+# A push to a branch only previews; posting needs config.json "mode": "live" on main plus the secret.
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths: ["bluesky-papers/**", ".github/workflows/bluesky-papers.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bluesky-papers
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preview the next seven days (branch push)
+        if: github.event_name == 'push'
+        run: python3 bluesky-papers/post_papers.py --mode preview --week | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Daily run (mode from config.json)
+        if: github.event_name != 'push'
+        env:
+          BLUESKY_HANDLE: ${{ vars.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: python3 bluesky-papers/post_papers.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Keep the record of posted papers
+        if: github.event_name != 'push'
+        run: |
+          git add bluesky-papers/state/posted.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git -c user.name="doclert-bot" -c user.email="hello@doclert.com" commit -m "bluesky-papers: posted $(date -u +%F)"
+          git push
