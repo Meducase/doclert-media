@@ -286,11 +286,16 @@ def main():
     ap.add_argument("--date", help="YYYY-MM-DD, default today (UTC)")
     ap.add_argument("--week", action="store_true", help="preview all seven topics")
     ap.add_argument("--setup-profile", action="store_true", help="one time: set the bio and the pinned post")
+    ap.add_argument("--check-login", action="store_true", help="log in with the secret and stop; posts nothing")
     args = ap.parse_args()
     with open(os.path.join(HERE, "config.json")) as f:
         cfg = json.load(f)
     mode = args.mode or os.environ.get("PAPERS_MODE_OVERRIDE") or cfg["mode"]
     today = dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(dt.timezone.utc).date()
+    if args.check_login:
+        session = login(cfg)
+        print("login ok:", session.get("handle"), "- nothing posted")
+        return 0
     if args.setup_profile:
         setup_profile(cfg)
         return 0
