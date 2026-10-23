@@ -22,4 +22,13 @@ Once, after Matt's OK: run the workflow by hand with "setup_profile" ticked; it 
 the post of config "profile" (NLM acknowledgement, "not medical advice").
 - `off`: stops everything. Changing the mode is one commit.
 
+Follows (config "follow"): journals, scientific societies and medical educators, in English, 30 to 50 accounts.
+A branch push reports what each handle resolves to and lists search candidates (public reads, no login). Run the
+workflow by hand with "follow" ticked to follow them: only a handle whose display name contains the expected
+name, at most 50, never one already followed.
+
+For other posts: `state/posted.json` keeps, per day, the topic, the thread link and each paper's title, journal,
+date and link (raw: https://raw.githubusercontent.com/Meducase/doclert-media/main/bluesky-papers/state/posted.json).
+Copy built on it follows the same rules: title verbatim, no PubMed name, no authors, no abstract.
+
 Template, topics and wording are approved by Matt (Doclert Marketing). Change them only with his OK.

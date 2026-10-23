@@ -14,6 +14,11 @@ Modes (config.json "mode", or --mode):
   live     post to Bluesky as config "handle", only from config "start" on and only with the
            BLUESKY_APP_PASSWORD secret; writes state/posted.json so a paper is never posted twice
 --setup-profile, once after Matt's OK, sets the bio and the pinned post of config "profile".
+--follow follows the accounts of config "follow" (journals, societies, educators): only a handle whose
+display name contains the expected name, at most 50, never one already followed. --check-follows (no
+secret; a branch push runs it) only reports what each handle resolves to and lists search candidates.
+state/posted.json keeps, per day, the topic, the thread link and each paper's title, journal, date and
+link: the source for other "what's new" posts (raw file on GitHub).
 
 Standard library only. NCBI: tool and email on every call, two requests a run.
 """
@@ -34,6 +39,8 @@ EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 NCBI_TOOL = "doclert-social"
 NCBI_EMAIL = "hello@doclert.com"
 BSKY = "https://bsky.social/xrpc/"
+APPVIEW = "https://public.api.bsky.app/xrpc/"  # public reads, no login
+MAX_FOLLOWS = 50
 LIMIT = 300  # Bluesky graphemes per post
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 COUNT_WORDS = {2: "Two", 3: "Three"}
@@ -255,6 +262,61 @@ def bsky_delete(session, uri):
         print("could not delete", uri, e, file=sys.stderr)
 
 
+def profiles(actors, headers=None, base=APPVIEW):
+    out = []
+    for k in range(0, len(actors), 25):
+        query = urllib.parse.urlencode([("actors", a) for a in actors[k:k + 25]])
+        out += get_json(base + "app.bsky.actor.getProfiles?" + query, headers=headers)["profiles"]
+    return {p["handle"]: p for p in out}
+
+
+def follow_matches(cfg, found):
+    """Configured handles whose display name has the expected name (keeps impostors and renamed accounts out)."""
+    ok, skipped = [], []
+    for item in cfg["follow"]["accounts"]:
+        p = found.get(item["handle"])
+        if p and item["name"].lower() in (p.get("displayName") or "").lower():
+            ok.append(p)
+        else:
+            skipped.append((item["handle"], (p or {}).get("displayName", "not found")))
+    return ok[:MAX_FOLLOWS], skipped
+
+
+def check_follows(cfg):
+    found = profiles([a["handle"] for a in cfg["follow"]["accounts"]])
+    ok, skipped = follow_matches(cfg, found)
+    print(f"## Follows: {len(ok)} would be followed, {len(skipped)} skipped\n")
+    for p in ok:
+        print(f"- ok {p['handle']} | {p.get('displayName')} | {p.get('followersCount')} followers")
+    for handle, name in skipped:
+        print(f"- SKIP {handle} | {name}")
+    known = set(found)
+    print("\n### Search candidates (not in the list)\n")
+    for q in cfg["follow"].get("search", []):
+        res = get_json(APPVIEW + "app.bsky.actor.searchActors?" + urllib.parse.urlencode({"q": q, "limit": 8}))
+        for a in res.get("actors", []):
+            if a["handle"] not in known:
+                known.add(a["handle"])
+                print(f"- [{q}] {a['handle']} | {a.get('displayName')} | {(a.get('description') or '')[:80]!r}")
+
+
+def follow(cfg):
+    session = login(cfg)
+    found = profiles([a["handle"] for a in cfg["follow"]["accounts"]], auth(session), BSKY)
+    ok, skipped = follow_matches(cfg, found)
+    done = 0
+    for p in ok:
+        if (p.get("viewer") or {}).get("following"):
+            continue
+        record = {"$type": "app.bsky.graph.follow", "subject": p["did"],
+                  "createdAt": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%fZ")}
+        body = json.dumps({"repo": session["did"], "collection": "app.bsky.graph.follow", "record": record}).encode()
+        get_json(BSKY + "com.atproto.repo.createRecord", body, auth(session))
+        done += 1
+        time.sleep(1)
+    print(f"followed {done} new, {len(ok) - done} already followed, skipped:", skipped or "none")
+
+
 def load_state():
     path = os.path.join(HERE, "state", "posted.json")
     if os.path.exists(path):
@@ -287,6 +349,8 @@ def main():
     ap.add_argument("--week", action="store_true", help="preview all seven topics")
     ap.add_argument("--setup-profile", action="store_true", help="one time: set the bio and the pinned post")
     ap.add_argument("--check-login", action="store_true", help="log in with the secret and stop; posts nothing")
+    ap.add_argument("--follow", action="store_true", help="follow the accounts of config \"follow\"")
+    ap.add_argument("--check-follows", action="store_true", help="report what the follow list resolves to; no login")
     args = ap.parse_args()
     with open(os.path.join(HERE, "config.json")) as f:
         cfg = json.load(f)
@@ -298,6 +362,12 @@ def main():
         return 0
     if args.setup_profile:
         setup_profile(cfg)
+        return 0
+    if args.check_follows:
+        check_follows(cfg)
+        return 0
+    if args.follow:
+        follow(cfg)
         return 0
     if mode == "off":
         print("mode off: nothing to do")
@@ -325,7 +395,14 @@ def main():
     if not posts:
         return 0
     uris = publish(cfg, posts)
-    state["posts"].append({"date": today.isoformat(), "pmids": [p["pmid"] for p in papers], "uris": uris})
+    topic = cfg["topics"][str(today.isoweekday())]["name"]
+    thread = f"https://bsky.app/profile/{cfg['handle']}/post/{uris[0].rsplit('/', 1)[-1]}"
+    state["posts"].append({
+        "date": today.isoformat(), "topic": topic, "thread": thread,
+        "papers": [{"title": p["title"], "journal": p["journal"], "date": p["date"],
+                    "link": "https://" + paper_link(p)} for p in papers],
+        "pmids": [p["pmid"] for p in papers], "uris": uris,
+    })
     save_state(state)
     print("posted:", *uris, sep="\n")
     return 0

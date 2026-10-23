@@ -107,5 +107,146 @@
   "profile": {
     "bio": "Doclert sends you new medical papers on your own topics, from several thousand medical journals. Automated daily posts: paper titles and links. Data courtesy of the U.S. National Library of Medicine. Not medical advice. A MEDUCASE product.",
     "pinned": "Daily: new paper titles on one topic, with the journal and a link to the paper. Titles exactly as published, nothing written by AI.\n\nCourtesy of the U.S. National Library of Medicine. No endorsement by NLM is implied; posts may not reflect NLM's current data. Not medical advice."
+  },
+  "follow": {
+    "accounts": [
+      {
+        "handle": "nejm.org",
+        "name": "NEJM"
+      },
+      {
+        "handle": "thelancet.bsky.social",
+        "name": "Lancet"
+      },
+      {
+        "handle": "thelancet.com",
+        "name": "Lancet"
+      },
+      {
+        "handle": "bmj.com",
+        "name": "BMJ"
+      },
+      {
+        "handle": "bmj.bsky.social",
+        "name": "BMJ"
+      },
+      {
+        "handle": "jamanetwork.bsky.social",
+        "name": "JAMA"
+      },
+      {
+        "handle": "jama.com",
+        "name": "JAMA"
+      },
+      {
+        "handle": "annalsofim.bsky.social",
+        "name": "Annals"
+      },
+      {
+        "handle": "naturemedicine.bsky.social",
+        "name": "Nature Medicine"
+      },
+      {
+        "handle": "nature.com",
+        "name": "Nature"
+      },
+      {
+        "handle": "science.org",
+        "name": "Science"
+      },
+      {
+        "handle": "cellpress.bsky.social",
+        "name": "Cell"
+      },
+      {
+        "handle": "plosmedicine.bsky.social",
+        "name": "PLOS"
+      },
+      {
+        "handle": "elifesciences.org",
+        "name": "eLife"
+      },
+      {
+        "handle": "cochrane.org",
+        "name": "Cochrane"
+      },
+      {
+        "handle": "who.int",
+        "name": "World Health"
+      },
+      {
+        "handle": "nih.gov",
+        "name": "NIH"
+      },
+      {
+        "handle": "erictopol.bsky.social",
+        "name": "Topol"
+      },
+      {
+        "handle": "statnews.com",
+        "name": "STAT"
+      },
+      {
+        "handle": "ahajournals.bsky.social",
+        "name": "AHA"
+      },
+      {
+        "handle": "escardio.bsky.social",
+        "name": "Cardiology"
+      },
+      {
+        "handle": "asco.org",
+        "name": "ASCO"
+      },
+      {
+        "handle": "idsociety.bsky.social",
+        "name": "IDSA"
+      },
+      {
+        "handle": "cidrap.bsky.social",
+        "name": "CIDRAP"
+      },
+      {
+        "handle": "ecdc.europa.eu",
+        "name": "ECDC"
+      },
+      {
+        "handle": "aap.org",
+        "name": "Pediatrics"
+      },
+      {
+        "handle": "rcpch.bsky.social",
+        "name": "RCPCH"
+      },
+      {
+        "handle": "plos.org",
+        "name": "PLOS"
+      },
+      {
+        "handle": "medrxiv.bsky.social",
+        "name": "medRxiv"
+      },
+      {
+        "handle": "bmjgh.bsky.social",
+        "name": "BMJ"
+      }
+    ],
+    "search": [
+      "NEJM",
+      "Lancet",
+      "JAMA",
+      "BMJ",
+      "journal of medicine",
+      "Cochrane",
+      "cardiology",
+      "oncology",
+      "infectious diseases",
+      "endocrinology",
+      "neurology",
+      "pediatrics",
+      "psychiatry",
+      "medical education",
+      "evidence-based medicine"
+    ]
   }
 }
