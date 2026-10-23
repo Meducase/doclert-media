@@ -115,10 +115,6 @@
         "name": "NEJM"
       },
       {
-        "handle": "thelancet.bsky.social",
-        "name": "Lancet"
-      },
-      {
         "handle": "thelancet.com",
         "name": "Lancet"
       },
@@ -127,24 +123,12 @@
         "name": "BMJ"
       },
       {
-        "handle": "bmj.bsky.social",
-        "name": "BMJ"
-      },
-      {
-        "handle": "jamanetwork.bsky.social",
-        "name": "JAMA"
-      },
-      {
         "handle": "jama.com",
         "name": "JAMA"
       },
       {
         "handle": "annalsofim.bsky.social",
-        "name": "Annals"
-      },
-      {
-        "handle": "naturemedicine.bsky.social",
-        "name": "Nature Medicine"
+        "name": "Annals of Internal Medicine"
       },
       {
         "handle": "nature.com",
@@ -156,97 +140,181 @@
       },
       {
         "handle": "cellpress.bsky.social",
-        "name": "Cell"
-      },
-      {
-        "handle": "plosmedicine.bsky.social",
-        "name": "PLOS"
-      },
-      {
-        "handle": "elifesciences.org",
-        "name": "eLife"
-      },
-      {
-        "handle": "cochrane.org",
-        "name": "Cochrane"
-      },
-      {
-        "handle": "who.int",
-        "name": "World Health"
-      },
-      {
-        "handle": "nih.gov",
-        "name": "NIH"
-      },
-      {
-        "handle": "erictopol.bsky.social",
-        "name": "Topol"
-      },
-      {
-        "handle": "statnews.com",
-        "name": "STAT"
-      },
-      {
-        "handle": "ahajournals.bsky.social",
-        "name": "AHA"
-      },
-      {
-        "handle": "escardio.bsky.social",
-        "name": "Cardiology"
-      },
-      {
-        "handle": "asco.org",
-        "name": "ASCO"
-      },
-      {
-        "handle": "idsociety.bsky.social",
-        "name": "IDSA"
-      },
-      {
-        "handle": "cidrap.bsky.social",
-        "name": "CIDRAP"
-      },
-      {
-        "handle": "ecdc.europa.eu",
-        "name": "ECDC"
-      },
-      {
-        "handle": "aap.org",
-        "name": "Pediatrics"
-      },
-      {
-        "handle": "rcpch.bsky.social",
-        "name": "RCPCH"
+        "name": "Cell Press"
       },
       {
         "handle": "plos.org",
         "name": "PLOS"
       },
       {
-        "handle": "medrxiv.bsky.social",
-        "name": "medRxiv"
+        "handle": "cochrane.org",
+        "name": "Cochrane"
       },
       {
-        "handle": "bmjgh.bsky.social",
-        "name": "BMJ"
+        "handle": "ai.nejm.org",
+        "name": "NEJM AI"
+      },
+      {
+        "handle": "bmjmedicine.bsky.social",
+        "name": "BMJ Medicine"
+      },
+      {
+        "handle": "journalgim.bsky.social",
+        "name": "Journal of General Internal Medicine"
+      },
+      {
+        "handle": "lancetgh.bsky.social",
+        "name": "Lancet Global Health"
+      },
+      {
+        "handle": "thelancetph.bsky.social",
+        "name": "Lancet Public Health"
+      },
+      {
+        "handle": "jamacardiology.com",
+        "name": "JAMA Cardiology"
+      },
+      {
+        "handle": "natrevcardiol.nature.com",
+        "name": "Nature Reviews Cardiology"
+      },
+      {
+        "handle": "thelancetoncol.bsky.social",
+        "name": "Lancet Oncology"
+      },
+      {
+        "handle": "jamaoncology.com",
+        "name": "JAMA Oncology"
+      },
+      {
+        "handle": "natrevclinonc.nature.com",
+        "name": "Nature Reviews Clinical Oncology"
+      },
+      {
+        "handle": "thelancetinfdis.bsky.social",
+        "name": "Lancet Infectious Diseases"
+      },
+      {
+        "handle": "cidjournal.bsky.social",
+        "name": "Clinical Infectious Diseases"
+      },
+      {
+        "handle": "jidjournal.bsky.social",
+        "name": "Journal of Infectious Diseases"
+      },
+      {
+        "handle": "lancetmicrobe.bsky.social",
+        "name": "Lancet Microbe"
+      },
+      {
+        "handle": "thelancetendo.bsky.social",
+        "name": "Lancet Diabetes"
+      },
+      {
+        "handle": "natrevendo.nature.com",
+        "name": "Nature Reviews Endocrinology"
+      },
+      {
+        "handle": "thelancetneuro.bsky.social",
+        "name": "Lancet Neurology"
+      },
+      {
+        "handle": "jamaneurology.com",
+        "name": "JAMA Neurology"
+      },
+      {
+        "handle": "natrevneurol.nature.com",
+        "name": "Nature Reviews Neurology"
+      },
+      {
+        "handle": "jamapediatrics.com",
+        "name": "JAMA Pediatrics"
+      },
+      {
+        "handle": "world-j-pediatr.bsky.social",
+        "name": "World Journal of Pediatrics"
+      },
+      {
+        "handle": "thelancetpsych.bsky.social",
+        "name": "Lancet Psychiatry"
+      },
+      {
+        "handle": "jamapsychiatry.com",
+        "name": "JAMA Psychiatry"
+      },
+      {
+        "handle": "ahajournals.bsky.social",
+        "name": "American Heart Association"
+      },
+      {
+        "handle": "escardio.bsky.social",
+        "name": "European Society of Cardiology"
+      },
+      {
+        "handle": "accintouch.bsky.social",
+        "name": "American College of Cardiology"
+      },
+      {
+        "handle": "myesmo.bsky.social",
+        "name": "ESMO"
+      },
+      {
+        "handle": "ascocancer.bsky.social",
+        "name": "American Society of Clinical Oncology"
+      },
+      {
+        "handle": "esendocrinology.bsky.social",
+        "name": "European Society of Endocrinology"
+      },
+      {
+        "handle": "socendocrinology.bsky.social",
+        "name": "Society for Endocrinology"
+      },
+      {
+        "handle": "aanmember.bsky.social",
+        "name": "American Academy of Neurology"
+      },
+      {
+        "handle": "ameracadpeds.bsky.social",
+        "name": "American Academy of Pediatrics"
+      },
+      {
+        "handle": "rcpch.bsky.social",
+        "name": "RCPCH"
+      },
+      {
+        "handle": "kingsioppn.bsky.social",
+        "name": "Institute of Psychiatry"
+      },
+      {
+        "handle": "cidrap.bsky.social",
+        "name": "CIDRAP"
+      },
+      {
+        "handle": "who.int",
+        "name": "WHO"
+      },
+      {
+        "handle": "ecdc.europa.eu",
+        "name": "European Centre for Disease Prevention"
+      },
+      {
+        "handle": "erictopol.bsky.social",
+        "name": "Eric Topol"
+      },
+      {
+        "handle": "cebmoxford.bsky.social",
+        "name": "Evidence-Based Medicine"
+      },
+      {
+        "handle": "asmeofficial.bsky.social",
+        "name": "Study of Medical Education"
       }
     ],
     "search": [
-      "NEJM",
-      "Lancet",
-      "JAMA",
-      "BMJ",
-      "journal of medicine",
-      "Cochrane",
-      "cardiology",
-      "oncology",
-      "infectious diseases",
-      "endocrinology",
-      "neurology",
-      "pediatrics",
-      "psychiatry",
-      "medical education",
-      "evidence-based medicine"
+      "psychiatry journal",
+      "Lancet Psychiatry",
+      "JAMA Psychiatry"
     ]
   }
 }
