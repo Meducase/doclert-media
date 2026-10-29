@@ -55,6 +55,7 @@ jobs:
     timeout-minutes: 10
     env:
       BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+      DOCLERT_RANKING_KEY: ${{ secrets.DOCLERT_RANKING_KEY }}
     steps:
       - name: Check out (plain git, no marketplace actions)
         env:
@@ -69,6 +70,10 @@ jobs:
       - name: Check the login (branch push; posts nothing)
         if: github.event_name == 'push'
         run: python3 bluesky-papers/post_papers.py --check-login
+      - name: Check the Ranking endpoint (branch push; counts only)
+        if: github.event_name == 'push'
+        continue-on-error: true
+        run: python3 bluesky-papers/post_papers.py --check-ranking
       - name: Set the bio and the pinned post (one time, by hand)
         if: github.event_name == 'workflow_dispatch' && inputs.setup_profile
         run: python3 bluesky-papers/post_papers.py --setup-profile

@@ -11,6 +11,13 @@ link to the paper (DOI, else the PubMed record). Copy never names PubMed (Matt, 
 "Courtesy of the U.S. National Library of Medicine" is in the bio and the pinned post. Never an abstract, author names or text written by AI. A title that would
 not fit Bluesky's 300 characters is skipped, never shortened. Fewer than two usable papers: no post that day.
 
+Doclert Ranking (from 30 Oct 2026, Matt's decision of 29 Oct): with the secret `DOCLERT_RANKING_KEY` (environment
+`production-media`; the bot's own key, it opens only `GET /api/stats.php?view=ranking`), the papers are the highest in
+the Doclert Ranking of the topic's specialties (`config.json` topic "specialties"), checked by the same post rules (one per
+journal, abstract, English title, fits 300 characters, not posted in 60 days). The Ranking only chooses; a post never shows
+it. Without the key, on any endpoint error or with fewer than two usable papers, the journal and title rules above choose.
+A branch push runs `--check-ranking` (counts per topic, posts nothing).
+
 Modes (`config.json` "mode"):
 - `preview`: renders and prints, posts nothing. A push to any branch other than `main` previews seven days in
   the Actions run summary.
