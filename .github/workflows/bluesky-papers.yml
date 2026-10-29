@@ -1,0 +1,87 @@
+name: bluesky-papers
+
+# Daily "New papers on <topic>" thread on Doclert's Bluesky account (bluesky-papers/README.md).
+# A push to a branch only previews and checks the login; posting needs config.json "mode": "live" on main.
+# The app password is the secret BLUESKY_APP_PASSWORD of the environment "production-media".
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+    inputs:
+      setup_profile:
+        description: "One time: set the bio and the pinned post"
+        type: boolean
+        default: false
+      follow:
+        description: "Follow the accounts of config.json \"follow\" (checked display names, at most 50)"
+        type: boolean
+        default: false
+  push:
+    branches-ignore: [main]
+    paths: ["bluesky-papers/**", ".github/workflows/bluesky-papers.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bluesky-papers
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out (plain git, no marketplace actions)
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch -q --depth 1 origin "$GITHUB_SHA"
+          git checkout -q FETCH_HEAD
+      - name: Preview the next seven days
+        env:
+          PAPERS_DEBUG: "1"
+        run: python3 bluesky-papers/post_papers.py --mode preview --week | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Check the follow list (public reads, no login)
+        continue-on-error: true
+        run: python3 bluesky-papers/post_papers.py --check-follows | tee -a "$GITHUB_STEP_SUMMARY"
+
+  bluesky:
+    runs-on: ubuntu-latest
+    environment: production-media
+    timeout-minutes: 10
+    env:
+      BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+    steps:
+      - name: Check out (plain git, no marketplace actions)
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          git init -q .
+          git remote add origin "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git fetch -q --depth 1 origin "$GITHUB_SHA"
+          git checkout -q -B "$GITHUB_REF_NAME" FETCH_HEAD
+          git config "branch.$GITHUB_REF_NAME.remote" origin
+          git config "branch.$GITHUB_REF_NAME.merge" "refs/heads/$GITHUB_REF_NAME"
+      - name: Check the login (branch push; posts nothing)
+        if: github.event_name == 'push'
+        run: python3 bluesky-papers/post_papers.py --check-login
+      - name: Set the bio and the pinned post (one time, by hand)
+        if: github.event_name == 'workflow_dispatch' && inputs.setup_profile
+        run: python3 bluesky-papers/post_papers.py --setup-profile
+      - name: Follow the accounts of the follow list (by hand)
+        if: github.event_name == 'workflow_dispatch' && inputs.follow
+        run: python3 bluesky-papers/post_papers.py --follow
+      - name: Daily run (mode from config.json)
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.setup_profile && !inputs.follow)
+        run: python3 bluesky-papers/post_papers.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Keep the record of posted papers
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.setup_profile && !inputs.follow)
+        run: |
+          git add bluesky-papers/state/posted.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git -c user.name="doclert-bot" -c user.email="hello@doclert.com" commit -m "bluesky-papers: posted $(date -u +%F)"
+          git push

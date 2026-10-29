@@ -1,0 +1,320 @@
+{
+  "mode": "live",
+  "start": "2026-10-30",
+  "post_time_utc": "13:00",
+  "network": "bluesky",
+  "handle": "doclert.bsky.social",
+  "page": "doclert",
+  "papers_per_post": 3,
+  "days_back": 7,
+  "repeat_block_days": 60,
+  "filters": "english[la] NOT (\"retracted publication\"[pt] OR \"expression of concern\"[pt] OR \"published erratum\"[pt] OR \"comment\"[pt] OR \"editorial\"[pt] OR \"letter\"[pt] OR \"news\"[pt] OR \"preprint\"[pt] OR \"portrait\"[pt] OR \"biography\"[pt])",
+  "topics": {
+    "1": {
+      "name": "cardiology",
+      "query": "cardiovascular diseases[mh] OR heart[tiab] OR cardiac[tiab] OR coronary[tiab] OR atrial fibrillation[tiab] OR hypertension[tiab] OR stroke[tiab]",
+      "journals": [
+        "Circulation",
+        "Eur Heart J",
+        "J Am Coll Cardiol",
+        "JAMA Cardiol",
+        "Lancet Cardiol"
+      ],
+      "title_words": "heart|cardi|coronary|atrial|myocard|hypertens|aortic|valv|arrhythm|vascular|statin|cholesterol|lipid"
+    },
+    "2": {
+      "name": "oncology",
+      "query": "neoplasms[mh] OR cancer[tiab] OR tumor[tiab] OR tumour[tiab] OR carcinoma[tiab] OR lymphoma[tiab] OR leukemia[tiab]",
+      "journals": [
+        "Lancet Oncol",
+        "J Clin Oncol",
+        "JAMA Oncol",
+        "Ann Oncol",
+        "Cancer Cell",
+        "Nat Rev Clin Oncol"
+      ],
+      "title_words": "cancer|tumou?r|carcinoma|lymphoma|leuka?emia|myeloma|melanoma|sarcoma|oncolog|metasta|chemotherap|immunotherap|glioma"
+    },
+    "3": {
+      "name": "infectious diseases",
+      "query": "infections[mh] OR infection[tiab] OR sepsis[tiab] OR antibiotic[tiab] OR antimicrobial[tiab] OR vaccine[tiab] OR HIV[tiab] OR tuberculosis[tiab]",
+      "journals": [
+        "Lancet Infect Dis",
+        "Clin Infect Dis",
+        "Lancet HIV",
+        "Lancet Microbe"
+      ],
+      "title_words": "infect|sepsis|septic|antibiot|antimicrob|vaccin|HIV|tubercul|malaria|influenza|COVID|SARS|viral|virus|bacter|fung|hepatitis|pneumonia"
+    },
+    "4": {
+      "name": "diabetes and endocrinology",
+      "query": "endocrine system diseases[mh] OR diabetes[tiab] OR obesity[tiab] OR thyroid[tiab] OR insulin[tiab] OR GLP-1[tiab]",
+      "journals": [
+        "Lancet Diabetes Endocrinol",
+        "Diabetes Care",
+        "Diabetologia",
+        "J Clin Endocrinol Metab"
+      ],
+      "title_words": "diabet|obes|insulin|glyc|thyroid|GLP-1|semaglutide|tirzepatide|adrenal|pituitar|endocrin|metabolic"
+    },
+    "5": {
+      "name": "neurology",
+      "query": "nervous system diseases[mh] OR dementia[tiab] OR Alzheimer[tiab] OR epilepsy[tiab] OR Parkinson[tiab] OR multiple sclerosis[tiab] OR migraine[tiab]",
+      "journals": [
+        "Lancet Neurol",
+        "JAMA Neurol",
+        "Neurology",
+        "Brain",
+        "Ann Neurol"
+      ],
+      "title_words": "neuro|brain|stroke|dementia|Alzheimer|epilep|seizure|Parkinson|multiple sclerosis|migraine|headache|cognit|encephal|spinal"
+    },
+    "6": {
+      "name": "paediatrics",
+      "query": "child[mh] OR infant[mh] OR adolescent[mh] OR children[tiab] OR paediatric[tiab] OR pediatric[tiab] OR neonatal[tiab]",
+      "journals": [
+        "Pediatrics",
+        "JAMA Pediatr",
+        "Lancet Child Adolesc Health",
+        "Arch Dis Child"
+      ],
+      "title_words": "child|infant|neonat|newborn|paediatric|pediatric|adolescen|preterm|school-age|youth"
+    },
+    "7": {
+      "name": "mental health",
+      "query": "mental disorders[mh] OR depression[tiab] OR anxiety[tiab] OR schizophrenia[tiab] OR bipolar[tiab] OR psychiatric[tiab]",
+      "journals": [
+        "Lancet Psychiatry",
+        "JAMA Psychiatry",
+        "Am J Psychiatry",
+        "World Psychiatry"
+      ],
+      "title_words": "mental|psychiatr|depress|anxiety|schizophren|bipolar|psychos|suicid|ADHD|autism|substance|alcohol|opioid use|eating disorder|PTSD|psycholog"
+    }
+  },
+  "general_journals": [
+    "N Engl J Med",
+    "Lancet",
+    "JAMA",
+    "BMJ",
+    "Ann Intern Med",
+    "Nat Med",
+    "JAMA Intern Med",
+    "JAMA Netw Open",
+    "Lancet Public Health",
+    "Cochrane Database Syst Rev"
+  ],
+  "profile": {
+    "bio": "Doclert sends you new medical papers on your own topics, from several thousand medical journals. Automated daily posts: paper titles and links. Data courtesy of the U.S. National Library of Medicine. Not medical advice. A MEDUCASE product.",
+    "pinned": "Daily: new paper titles on one topic, with the journal and a link to the paper. Titles exactly as published, nothing written by AI.\n\nCourtesy of the U.S. National Library of Medicine. No endorsement by NLM is implied; posts may not reflect NLM's current data. Not medical advice."
+  },
+  "follow": {
+    "accounts": [
+      {
+        "handle": "nejm.org",
+        "name": "NEJM"
+      },
+      {
+        "handle": "thelancet.com",
+        "name": "Lancet"
+      },
+      {
+        "handle": "bmj.com",
+        "name": "BMJ"
+      },
+      {
+        "handle": "jama.com",
+        "name": "JAMA"
+      },
+      {
+        "handle": "annalsofim.bsky.social",
+        "name": "Annals of Internal Medicine"
+      },
+      {
+        "handle": "nature.com",
+        "name": "Nature"
+      },
+      {
+        "handle": "science.org",
+        "name": "Science"
+      },
+      {
+        "handle": "cellpress.bsky.social",
+        "name": "Cell Press"
+      },
+      {
+        "handle": "plos.org",
+        "name": "PLOS"
+      },
+      {
+        "handle": "cochrane.org",
+        "name": "Cochrane"
+      },
+      {
+        "handle": "ai.nejm.org",
+        "name": "NEJM AI"
+      },
+      {
+        "handle": "bmjmedicine.bsky.social",
+        "name": "BMJ Medicine"
+      },
+      {
+        "handle": "journalgim.bsky.social",
+        "name": "Journal of General Internal Medicine"
+      },
+      {
+        "handle": "lancetgh.bsky.social",
+        "name": "Lancet Global Health"
+      },
+      {
+        "handle": "thelancetph.bsky.social",
+        "name": "Lancet Public Health"
+      },
+      {
+        "handle": "jamacardiology.com",
+        "name": "JAMA Cardiology"
+      },
+      {
+        "handle": "natrevcardiol.nature.com",
+        "name": "Nature Reviews Cardiology"
+      },
+      {
+        "handle": "thelancetoncol.bsky.social",
+        "name": "Lancet Oncology"
+      },
+      {
+        "handle": "jamaoncology.com",
+        "name": "JAMA Oncology"
+      },
+      {
+        "handle": "natrevclinonc.nature.com",
+        "name": "Nature Reviews Clinical Oncology"
+      },
+      {
+        "handle": "thelancetinfdis.bsky.social",
+        "name": "Lancet Infectious Diseases"
+      },
+      {
+        "handle": "cidjournal.bsky.social",
+        "name": "Clinical Infectious Diseases"
+      },
+      {
+        "handle": "jidjournal.bsky.social",
+        "name": "Journal of Infectious Diseases"
+      },
+      {
+        "handle": "lancetmicrobe.bsky.social",
+        "name": "Lancet Microbe"
+      },
+      {
+        "handle": "thelancetendo.bsky.social",
+        "name": "Lancet Diabetes"
+      },
+      {
+        "handle": "natrevendo.nature.com",
+        "name": "Nature Reviews Endocrinology"
+      },
+      {
+        "handle": "thelancetneuro.bsky.social",
+        "name": "Lancet Neurology"
+      },
+      {
+        "handle": "jamaneurology.com",
+        "name": "JAMA Neurology"
+      },
+      {
+        "handle": "natrevneurol.nature.com",
+        "name": "Nature Reviews Neurology"
+      },
+      {
+        "handle": "jamapediatrics.com",
+        "name": "JAMA Pediatrics"
+      },
+      {
+        "handle": "world-j-pediatr.bsky.social",
+        "name": "World Journal of Pediatrics"
+      },
+      {
+        "handle": "thelancetpsych.bsky.social",
+        "name": "Lancet Psychiatry"
+      },
+      {
+        "handle": "jamapsychiatry.com",
+        "name": "JAMA Psychiatry"
+      },
+      {
+        "handle": "ahajournals.bsky.social",
+        "name": "American Heart Association"
+      },
+      {
+        "handle": "escardio.bsky.social",
+        "name": "European Society of Cardiology"
+      },
+      {
+        "handle": "accintouch.bsky.social",
+        "name": "American College of Cardiology"
+      },
+      {
+        "handle": "myesmo.bsky.social",
+        "name": "ESMO"
+      },
+      {
+        "handle": "ascocancer.bsky.social",
+        "name": "American Society of Clinical Oncology"
+      },
+      {
+        "handle": "esendocrinology.bsky.social",
+        "name": "European Society of Endocrinology"
+      },
+      {
+        "handle": "socendocrinology.bsky.social",
+        "name": "Society for Endocrinology"
+      },
+      {
+        "handle": "aanmember.bsky.social",
+        "name": "American Academy of Neurology"
+      },
+      {
+        "handle": "ameracadpeds.bsky.social",
+        "name": "American Academy of Pediatrics"
+      },
+      {
+        "handle": "rcpch.bsky.social",
+        "name": "RCPCH"
+      },
+      {
+        "handle": "kingsioppn.bsky.social",
+        "name": "Institute of Psychiatry"
+      },
+      {
+        "handle": "cidrap.bsky.social",
+        "name": "CIDRAP"
+      },
+      {
+        "handle": "who.int",
+        "name": "WHO"
+      },
+      {
+        "handle": "ecdc.europa.eu",
+        "name": "European Centre for Disease Prevention"
+      },
+      {
+        "handle": "erictopol.bsky.social",
+        "name": "Eric Topol"
+      },
+      {
+        "handle": "cebmoxford.bsky.social",
+        "name": "Evidence-Based Medicine"
+      },
+      {
+        "handle": "asmeofficial.bsky.social",
+        "name": "Study of Medical Education"
+      }
+    ],
+    "search": [
+      "psychiatry journal",
+      "Lancet Psychiatry",
+      "JAMA Psychiatry"
+    ]
+  }
+}
