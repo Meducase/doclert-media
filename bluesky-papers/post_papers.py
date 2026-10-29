@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Daily "New papers on <topic>" thread for Doclert's Bluesky account.
 
-Takes up to three recent papers from PubMed (NLM E-utilities) for the day's topic and renders a
+Takes up to three recent papers for the day's topic and renders a
 thread: a head post with the Doclert short link, then one reply per paper with its title exactly as
 PubMed gives it, the journal, the date and a link to the paper (its DOI, else its PubMed record).
-Nothing else: no abstract, no author names, no text written by AI (DATA-RIGHTS tier 1 without the
+The papers are the highest in the Doclert Ranking of the topic's specialties (GET /api/stats.php?view=ranking with
+the DOCLERT_RANKING_KEY secret; the Ranking only chooses, posts never show it); without the key, on any endpoint error or
+with fewer than 2 usable papers, the topic's journal and title rules of config.json choose instead. Titles and journals
+always come from PubMed (NLM E-utilities). A post carries nothing else: no abstract, no author names, no text written by AI (DATA-RIGHTS tier 1 without the
 author). Copy never names PubMed (Matt, 21 Oct 2026); NLM's required acknowledgement sits in the bio
 and the pinned post (config "profile").
 
@@ -85,9 +88,66 @@ def nice_date(summary):
     return summary.get("pubdate", "").strip()
 
 
+def pick(cfg, result, pmids, on_topic=None):
+    """Papers in the order of pmids that pass the post rules; at most papers_per_post, one per journal."""
+    papers, journals = [], set()
+    for pmid in pmids:
+        s = result.get(pmid)
+        if not s:
+            continue
+        title = clean_title(s.get("title"))
+        journal = (s.get("source") or "").strip()
+        if not title or not journal or BLOCKED_TITLE.search(title) or journal in journals:
+            continue
+        if "Has Abstract" not in s.get("attributes", []):
+            continue  # news, editorials and commentary rarely have one; research papers do
+        if "eng" not in s.get("lang", ["eng"]):
+            continue  # a translated title in brackets is not the title as published
+        if on_topic and not on_topic.search(title):
+            continue  # the title itself must name the day's topic
+        paper = {"pmid": pmid, "title": title, "journal": journal, "date": nice_date(s), "doi": doi_of(s)}
+        if len(paper_text(paper, 1, 3)) > LIMIT:
+            continue  # never shorten a title: skip it
+        papers.append(paper)
+        journals.add(journal)
+        if len(papers) == cfg["papers_per_post"]:
+            break
+    return papers
+
+
+def ranked_pmids(cfg, topic, blocked):
+    """PMIDs of the topic's specialties from the Doclert Ranking endpoint, highest first (None without the key)."""
+    key = os.environ.get("DOCLERT_RANKING_KEY", "").strip()
+    rk = cfg.get("ranking") or {}
+    if not key or not rk.get("enabled") or not topic.get("specialties"):
+        return None
+    items = []
+    for spec in topic["specialties"]:
+        query = urllib.parse.urlencode({"view": "ranking", "specialty": spec, "days": cfg["days_back"], "limit": 50})
+        items += get_json(rk["api"] + "?" + query, headers={"X-Doclert-Stats-Key": key})["items"]
+    items.sort(key=lambda i: -float(i["ranking"]))  # stable: the endpoint's own order breaks ties
+    seen, out = set(blocked), []
+    for i in items:
+        if i["pmid"] not in seen:
+            seen.add(i["pmid"])
+            out.append(i["pmid"])
+    return out
+
+
 def find_papers(cfg, topic, today, blocked):
+    """The Doclert Ranking chooses when its key is there; the journal and title rules otherwise, or as the fallback."""
+    try:
+        ranked = ranked_pmids(cfg, topic, blocked)
+    except Exception as e:  # never lose a day over the endpoint
+        print("ranking unavailable, using the rules:", str(e)[:200], file=sys.stderr)
+        ranked = None
+    if ranked:
+        result = eutils("esummary.fcgi", {"db": "pubmed", "id": ",".join(ranked[:100])})["result"]
+        papers = pick(cfg, result, ranked[:100])
+        if len(papers) >= 2:
+            return papers, len(ranked), "ranking"
+        print(f"ranking gave {len(papers)} usable papers, using the rules", file=sys.stderr)
     journals = " OR ".join(f'"{j}"[ta]' for j in topic["journals"] + cfg["general_journals"])
-    on_topic = re.compile(topic["title_words"], re.I)
     term = f"({topic['query']}) AND ({journals}) AND {cfg['filters']}"
     found = eutils("esearch.fcgi", {
         "db": "pubmed", "term": term, "datetype": "edat",
@@ -98,27 +158,19 @@ def find_papers(cfg, topic, today, blocked):
               "| warnings:", found.get("warninglist"), file=sys.stderr)
     ids = [i for i in found.get("idlist", []) if i not in blocked]
     if not ids:
-        return [], int(found.get("count", 0))
+        return [], int(found.get("count", 0)), "rules"
     result = eutils("esummary.fcgi", {"db": "pubmed", "id": ",".join(ids)})["result"]
-    papers, journals = [], set()
-    for pmid in result.get("uids", []):
-        s = result[pmid]
-        title = clean_title(s.get("title"))
-        journal = (s.get("source") or "").strip()
-        if not title or not journal or BLOCKED_TITLE.search(title) or journal in journals:
-            continue
-        if "Has Abstract" not in s.get("attributes", []):
-            continue  # news, editorials and commentary rarely have one; research papers do
-        if not on_topic.search(title):
-            continue  # the title itself must name the day's topic
-        paper = {"pmid": pmid, "title": title, "journal": journal, "date": nice_date(s), "doi": doi_of(s)}
-        if len(paper_text(paper, 1, 3)) > LIMIT:
-            continue  # never shorten a title: skip it
-        papers.append(paper)
-        journals.add(journal)
-        if len(papers) == cfg["papers_per_post"]:
-            break
-    return papers, int(found.get("count", 0))
+    return pick(cfg, result, result.get("uids", []), re.compile(topic["title_words"], re.I)), int(found.get("count", 0)), "rules"
+
+
+def check_ranking(cfg):
+    """Branch push: does the endpoint answer the runner for every topic? Counts only, posts nothing."""
+    for n, topic in sorted(cfg["topics"].items()):
+        try:
+            ranked = ranked_pmids(cfg, topic, set())
+            print(f"- {topic['name']}: " + ("no key" if ranked is None else f"{len(ranked)} ranked papers"))
+        except Exception as e:
+            print(f"- {topic['name']}: ERROR {str(e)[:200]}")
 
 
 def post_id(cfg, day):
@@ -173,7 +225,8 @@ def facets(text, links):
 
 def build_thread(cfg, day, blocked):
     topic = cfg["topics"][str(day.isoweekday())]
-    papers, count = find_papers(cfg, topic, day, blocked)
+    papers, count, how = find_papers(cfg, topic, day, blocked)
+    print(f"({topic['name']}: chosen by {how})", file=sys.stderr)
     if len(papers) < 2:
         return None, papers, count
     n = len(papers)
@@ -333,7 +386,7 @@ def save_state(state):
 
 
 def show(day, posts, papers, count):
-    print(f"## {day.isoformat()} ({day.strftime('%A')}): {count} PubMed matches, {len(papers)} used\n")
+    print(f"## {day.isoformat()} ({day.strftime('%A')}): {count} candidates, {len(papers)} used\n")
     if not posts:
         print("No post today (fewer than 2 usable papers).\n")
         return
@@ -350,6 +403,7 @@ def main():
     ap.add_argument("--setup-profile", action="store_true", help="one time: set the bio and the pinned post")
     ap.add_argument("--check-login", action="store_true", help="log in with the secret and stop; posts nothing")
     ap.add_argument("--follow", action="store_true", help="follow the accounts of config \"follow\"")
+    ap.add_argument("--check-ranking", action="store_true", help="ask the Ranking endpoint for every topic; posts nothing")
     ap.add_argument("--check-follows", action="store_true", help="report what the follow list resolves to; no login")
     args = ap.parse_args()
     with open(os.path.join(HERE, "config.json")) as f:
@@ -362,6 +416,9 @@ def main():
         return 0
     if args.setup_profile:
         setup_profile(cfg)
+        return 0
+    if args.check_ranking:
+        check_ranking(cfg)
         return 0
     if args.check_follows:
         check_follows(cfg)

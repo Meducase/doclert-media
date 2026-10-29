@@ -8,6 +8,10 @@
   "papers_per_post": 3,
   "days_back": 7,
   "repeat_block_days": 60,
+  "ranking": {
+    "enabled": true,
+    "api": "https://doclert.com/api/stats.php"
+  },
   "filters": "english[la] NOT (\"retracted publication\"[pt] OR \"expression of concern\"[pt] OR \"published erratum\"[pt] OR \"comment\"[pt] OR \"editorial\"[pt] OR \"letter\"[pt] OR \"news\"[pt] OR \"preprint\"[pt] OR \"portrait\"[pt] OR \"biography\"[pt])",
   "topics": {
     "1": {
@@ -20,7 +24,10 @@
         "JAMA Cardiol",
         "Lancet Cardiol"
       ],
-      "title_words": "heart|cardi|coronary|atrial|myocard|hypertens|aortic|valv|arrhythm|vascular|statin|cholesterol|lipid"
+      "title_words": "heart|cardi|coronary|atrial|myocard|hypertens|aortic|valv|arrhythm|vascular|statin|cholesterol|lipid",
+      "specialties": [
+        "cardiology"
+      ]
     },
     "2": {
       "name": "oncology",
@@ -33,7 +40,10 @@
         "Cancer Cell",
         "Nat Rev Clin Oncol"
       ],
-      "title_words": "cancer|tumou?r|carcinoma|lymphoma|leuka?emia|myeloma|melanoma|sarcoma|oncolog|metasta|chemotherap|immunotherap|glioma"
+      "title_words": "cancer|tumou?r|carcinoma|lymphoma|leuka?emia|myeloma|melanoma|sarcoma|oncolog|metasta|chemotherap|immunotherap|glioma",
+      "specialties": [
+        "medical-oncology"
+      ]
     },
     "3": {
       "name": "infectious diseases",
@@ -44,7 +54,10 @@
         "Lancet HIV",
         "Lancet Microbe"
       ],
-      "title_words": "infect|sepsis|septic|antibiot|antimicrob|vaccin|HIV|tubercul|malaria|influenza|COVID|SARS|viral|virus|bacter|fung|hepatitis|pneumonia"
+      "title_words": "infect|sepsis|septic|antibiot|antimicrob|vaccin|HIV|tubercul|malaria|influenza|COVID|SARS|viral|virus|bacter|fung|hepatitis|pneumonia",
+      "specialties": [
+        "infectious-diseases"
+      ]
     },
     "4": {
       "name": "diabetes and endocrinology",
@@ -55,7 +68,11 @@
         "Diabetologia",
         "J Clin Endocrinol Metab"
       ],
-      "title_words": "diabet|obes|insulin|glyc|thyroid|GLP-1|semaglutide|tirzepatide|adrenal|pituitar|endocrin|metabolic"
+      "title_words": "diabet|obes|insulin|glyc|thyroid|GLP-1|semaglutide|tirzepatide|adrenal|pituitar|endocrin|metabolic",
+      "specialties": [
+        "endocrinology",
+        "diabetology"
+      ]
     },
     "5": {
       "name": "neurology",
@@ -67,7 +84,10 @@
         "Brain",
         "Ann Neurol"
       ],
-      "title_words": "neuro|brain|stroke|dementia|Alzheimer|epilep|seizure|Parkinson|multiple sclerosis|migraine|headache|cognit|encephal|spinal"
+      "title_words": "neuro|brain|stroke|dementia|Alzheimer|epilep|seizure|Parkinson|multiple sclerosis|migraine|headache|cognit|encephal|spinal",
+      "specialties": [
+        "neurology"
+      ]
     },
     "6": {
       "name": "paediatrics",
@@ -78,7 +98,10 @@
         "Lancet Child Adolesc Health",
         "Arch Dis Child"
       ],
-      "title_words": "child|infant|neonat|newborn|paediatric|pediatric|adolescen|preterm|school-age|youth"
+      "title_words": "child|infant|neonat|newborn|paediatric|pediatric|adolescen|preterm|school-age|youth",
+      "specialties": [
+        "pediatrics"
+      ]
     },
     "7": {
       "name": "mental health",
@@ -89,7 +112,10 @@
         "Am J Psychiatry",
         "World Psychiatry"
       ],
-      "title_words": "mental|psychiatr|depress|anxiety|schizophren|bipolar|psychos|suicid|ADHD|autism|substance|alcohol|opioid use|eating disorder|PTSD|psycholog"
+      "title_words": "mental|psychiatr|depress|anxiety|schizophren|bipolar|psychos|suicid|ADHD|autism|substance|alcohol|opioid use|eating disorder|PTSD|psycholog",
+      "specialties": [
+        "psychiatry"
+      ]
     }
   },
   "general_journals": [
