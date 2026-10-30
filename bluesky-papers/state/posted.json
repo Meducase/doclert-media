@@ -1,0 +1,40 @@
+{
+ "posts": [
+  {
+   "date": "2026-10-30",
+   "topic": "neurology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mz3xhqwgye24",
+   "papers": [
+    {
+     "title": "Stroke and Bleeding Risk in Long-Term Care Residents With Atrial Fibrillation Who Discontinue Anticoagulation.",
+     "journal": "JAMA Netw Open",
+     "date": "1 Oct 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.40964"
+    },
+    {
+     "title": "Alzheimer's pathology mediates arteriolosclerosis and cerebral amyloid angiopathy associations with cognition.",
+     "journal": "Brain",
+     "date": "29 Oct 2026",
+     "link": "https://doi.org/10.1093/brain/awag380"
+    },
+    {
+     "title": "Ambulatory Episodic Hypertension in Parkinson's Disease With Orthostatic Hypotension.",
+     "journal": "Ann Neurol",
+     "date": "24 Oct 2026",
+     "link": "https://doi.org/10.1002/ana.78393"
+    }
+   ],
+   "pmids": [
+    "42931771",
+    "42953974",
+    "42920346"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz3xhqwgye24",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz3xhs2zv424",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz3xht7lps25",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz3xhuejsc2b"
+   ]
+  }
+ ]
+}
