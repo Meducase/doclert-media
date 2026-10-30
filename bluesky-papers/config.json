@@ -24,10 +24,7 @@
         "JAMA Cardiol",
         "Lancet Cardiol"
       ],
-      "title_words": "heart|cardi|coronary|atrial|myocard|hypertens|aortic|valv|arrhythm|vascular|statin|cholesterol|lipid",
-      "specialties": [
-        "cardiology"
-      ]
+      "title_words": "heart|cardi|coronary|atrial|myocard|hypertens|aortic|valv|arrhythm|vascular|statin|cholesterol|lipid"
     },
     "2": {
       "name": "oncology",
@@ -40,10 +37,7 @@
         "Cancer Cell",
         "Nat Rev Clin Oncol"
       ],
-      "title_words": "cancer|tumou?r|carcinoma|lymphoma|leuka?emia|myeloma|melanoma|sarcoma|oncolog|metasta|chemotherap|immunotherap|glioma",
-      "specialties": [
-        "medical-oncology"
-      ]
+      "title_words": "cancer|tumou?r|carcinoma|lymphoma|leuka?emia|myeloma|melanoma|sarcoma|oncolog|metasta|chemotherap|immunotherap|glioma"
     },
     "3": {
       "name": "infectious diseases",
@@ -54,10 +48,7 @@
         "Lancet HIV",
         "Lancet Microbe"
       ],
-      "title_words": "infect|sepsis|septic|antibiot|antimicrob|vaccin|HIV|tubercul|malaria|influenza|COVID|SARS|viral|virus|bacter|fung|hepatitis|pneumonia",
-      "specialties": [
-        "infectious-diseases"
-      ]
+      "title_words": "infect|sepsis|septic|antibiot|antimicrob|vaccin|HIV|tubercul|malaria|influenza|COVID|SARS|viral|virus|bacter|fung|hepatitis|pneumonia"
     },
     "4": {
       "name": "diabetes and endocrinology",
@@ -68,11 +59,7 @@
         "Diabetologia",
         "J Clin Endocrinol Metab"
       ],
-      "title_words": "diabet|obes|insulin|glyc|thyroid|GLP-1|semaglutide|tirzepatide|adrenal|pituitar|endocrin|metabolic",
-      "specialties": [
-        "endocrinology",
-        "diabetology"
-      ]
+      "title_words": "diabet|obes|insulin|glyc|thyroid|GLP-1|semaglutide|tirzepatide|adrenal|pituitar|endocrin|metabolic"
     },
     "5": {
       "name": "neurology",
@@ -84,10 +71,7 @@
         "Brain",
         "Ann Neurol"
       ],
-      "title_words": "neuro|brain|stroke|dementia|Alzheimer|epilep|seizure|Parkinson|multiple sclerosis|migraine|headache|cognit|encephal|spinal",
-      "specialties": [
-        "neurology"
-      ]
+      "title_words": "neuro|brain|stroke|dementia|Alzheimer|epilep|seizure|Parkinson|multiple sclerosis|migraine|headache|cognit|encephal|spinal"
     },
     "6": {
       "name": "paediatrics",
@@ -98,10 +82,7 @@
         "Lancet Child Adolesc Health",
         "Arch Dis Child"
       ],
-      "title_words": "child|infant|neonat|newborn|paediatric|pediatric|adolescen|preterm|school-age|youth",
-      "specialties": [
-        "pediatrics"
-      ]
+      "title_words": "child|infant|neonat|newborn|paediatric|pediatric|adolescen|preterm|school-age|youth"
     },
     "7": {
       "name": "mental health",
@@ -112,10 +93,7 @@
         "Am J Psychiatry",
         "World Psychiatry"
       ],
-      "title_words": "mental|psychiatr|depress|anxiety|schizophren|bipolar|psychos|suicid|ADHD|autism|substance|alcohol|opioid use|eating disorder|PTSD|psycholog",
-      "specialties": [
-        "psychiatry"
-      ]
+      "title_words": "mental|psychiatr|depress|anxiety|schizophren|bipolar|psychos|suicid|ADHD|autism|substance|alcohol|opioid use|eating disorder|PTSD|psycholog"
     }
   },
   "general_journals": [

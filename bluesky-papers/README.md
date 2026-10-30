@@ -13,10 +13,11 @@ not fit Bluesky's 300 characters is skipped, never shortened. Fewer than two usa
 
 Doclert Ranking (from 30 Oct 2026, Matt's decision of 29 Oct): with the secret `DOCLERT_RANKING_KEY` (environment
 `production-media`; the bot's own key, it opens only `GET /api/stats.php?view=ranking`), the papers are the highest in
-the Doclert Ranking of the topic's specialties (`config.json` topic "specialties"), checked by the same post rules (one per
-journal, abstract, English title, fits 300 characters, not posted in 60 days). The Ranking only chooses; a post never shows
-it. Without the key, on any endpoint error or with fewer than two usable papers, the journal and title rules above choose.
-A branch push runs `--check-ranking` (counts per topic, posts nothing).
+the Doclert Ranking among the candidates the rules above give (topic journals plus general ones, topic word in the title,
+abstract, English, fits 300 characters, not posted in 60 days; one per journal). The Ranking only orders them; a post never
+shows it. Without the key or on any endpoint error the newest candidates come first. (29 Oct preview: the Ranking over a
+whole specialty picked regional guidelines from small journals and off-topic papers, so it orders the rules' candidates
+instead.) A branch push runs `--check-ranking` and a preview with the Ranking (posts nothing).
 
 Modes (`config.json` "mode"):
 - `preview`: renders and prints, posts nothing. A push to any branch other than `main` previews seven days in
