@@ -22,7 +22,7 @@ instead.) A branch push runs `--check-ranking` and a preview with the Ranking (p
 Modes (`config.json` "mode"):
 - `preview`: renders and prints, posts nothing. A push to any branch other than `main` previews seven days in
   the Actions run summary.
-- `live`: the scheduled run (13:00 UTC) posts as "handle", from "start" on, with the secret `BLUESKY_APP_PASSWORD`
+- `live`: the scheduled run (13:07 UTC, retried 13:37 and 14:17; one post a day) posts as "handle", from "start" on, with the secret `BLUESKY_APP_PASSWORD`
   of the environment `production-media` (a Bluesky app password, never the account password). It records what it posted in
   `state/posted.json`.
 
