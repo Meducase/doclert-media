@@ -77,14 +77,20 @@ def clean_title(raw):
 
 
 def nice_date(summary):
-    """The online date when PubMed has one (an issue date can lie weeks ahead), else the publication date."""
+    """The online date when PubMed has one (an issue date can lie weeks ahead), else the publication date, never a
+    date after today: then the day PubMed added the record."""
     m = re.match(r"(\d{4}) ([A-Z][a-z]{2}) (\d{1,2})$", (summary.get("epubdate") or "").strip())
     if m and m.group(2) in MONTHS:
         return f"{int(m.group(3))} {m.group(2)} {m.group(1)}"
-    m = re.match(r"(\d{4})/(\d{2})/(\d{2})", summary.get("sortpubdate", ""))
-    if m:
-        y, mo, d = (int(x) for x in m.groups())
-        return f"{d} {MONTHS[mo - 1]} {y}"
+    today = dt.datetime.now(dt.timezone.utc).date()
+    dates = [summary.get("sortpubdate", "")]
+    dates += [h.get("date", "") for h in summary.get("history", []) if h.get("pubstatus") in ("entrez", "pubmed")]
+    for raw in dates:
+        m = re.match(r"(\d{4})/(\d{2})/(\d{2})", raw or "")
+        if m:
+            day = dt.date(*(int(x) for x in m.groups()))
+            if day <= today:
+                return f"{day.day} {MONTHS[day.month - 1]} {day.year}"
     return summary.get("pubdate", "").strip()
 
 
