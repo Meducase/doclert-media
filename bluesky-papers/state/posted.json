@@ -35,6 +35,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz3xht7lps25",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz3xhuejsc2b"
    ]
+  },
+  {
+   "date": "2026-10-31",
+   "topic": "paediatrics",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mz6iu5634q24",
+   "papers": [
+    {
+     "title": "Prone positioning and high-frequency oscillatory ventilation in early paediatric acute respiratory distress syndrome (PROSpect): an international, two-by-two factorial, response-adaptive, phase 3, randomised controlled trial.",
+     "journal": "Lancet",
+     "date": "31 Oct 2026",
+     "link": "https://doi.org/10.1016/S0140-6736(26)01949-5"
+    },
+    {
+     "title": "Children and Families Affected by Parental Substance Use: Clinical Report.",
+     "journal": "Pediatrics",
+     "date": "26 Oct 2026",
+     "link": "https://doi.org/10.1542/peds.2026-079038"
+    },
+    {
+     "title": "Maternal Vaccination vs Nirsevimab Use and Respiratory Syncytial Virus Infection Among Full-Term Infants.",
+     "journal": "JAMA Netw Open",
+     "date": "1 Oct 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.36760"
+    }
+   ],
+   "pmids": [
+    "42956771",
+    "42927772",
+    "42925481"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz6iu5634q24",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz6iu6j3ek22",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz6iu7x2yk2p",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz6iubc7bq2b"
+   ]
   }
  ]
 }
