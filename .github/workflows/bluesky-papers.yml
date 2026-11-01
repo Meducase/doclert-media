@@ -4,12 +4,11 @@ name: bluesky-papers
 # A push to a branch only previews and checks the login; posting needs config.json "mode": "live" on main.
 # The app password is the secret BLUESKY_APP_PASSWORD of the environment "production-media".
 on:
-  # GitHub drops scheduled runs at the top of the hour under load (none fired on 29 and 30 Oct at 13:00), so three
-  # tries off the hour; the script posts once a day ("already posted today"), the later tries do nothing.
+  # Scheduled runs on this repository start hours late (about 4.5 h on 30 and 31 Oct; none at 13:00 on 29 and 30 Oct),
+  # so tries every 30 minutes from 08:07 UTC; a scheduled run posts only inside config.json "post_window_utc"
+  # (13:00-20:00 UTC) and once a day ("already posted today"), every other try does nothing.
   schedule:
-    - cron: "7 13 * * *"
-    - cron: "37 13 * * *"
-    - cron: "17 14 * * *"
+    - cron: "7,37 8-14 * * *"
   workflow_dispatch:
     inputs:
       setup_profile:

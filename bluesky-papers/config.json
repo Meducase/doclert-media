@@ -8,6 +8,7 @@
   "papers_per_post": 3,
   "days_back": 7,
   "repeat_block_days": 60,
+  "post_window_utc": ["13:00", "20:00"],
   "ranking": {
     "enabled": true,
     "api": "https://doclert.com/api/stats.php"
@@ -24,7 +25,7 @@
         "JAMA Cardiol",
         "Lancet Cardiol"
       ],
-      "title_words": "heart|cardi|coronary|atrial|myocard|hypertens|aortic|valv|arrhythm|vascular|statin|cholesterol|lipid"
+      "title_words": "heart|cardi|pericard|electrocardi|coronary|atrial|myocard|hypertens|aortic|valv|arrhythm|vascular|statin|cholesterol|lipid|dyslipid"
     },
     "2": {
       "name": "oncology",
@@ -48,7 +49,7 @@
         "Lancet HIV",
         "Lancet Microbe"
       ],
-      "title_words": "infect|sepsis|septic|antibiot|antimicrob|vaccin|HIV|tubercul|malaria|influenza|COVID|SARS|viral|virus|bacter|fung|hepatitis|pneumonia"
+      "title_words": "infect|sepsis|septic|antibiot|antimicrob|vaccin|HIV|tubercul|malaria|influenza|COVID|SARS|viral|antiviral|virus|coronavirus|bacter|fung|hepatitis|pneumonia"
     },
     "4": {
       "name": "diabetes and endocrinology",
@@ -59,7 +60,7 @@
         "Diabetologia",
         "J Clin Endocrinol Metab"
       ],
-      "title_words": "diabet|obes|insulin|glyc|thyroid|GLP-1|semaglutide|tirzepatide|adrenal|pituitar|endocrin|metabolic"
+      "title_words": "diabet|obes|insulin|glyc|hyperglyc|hypoglyc|thyroid|GLP-1|semaglutide|tirzepatide|adrenal|pituitar|endocrin|metabolic"
     },
     "5": {
       "name": "neurology",

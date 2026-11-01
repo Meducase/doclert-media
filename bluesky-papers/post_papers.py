@@ -96,6 +96,11 @@ def nice_date(summary):
     return summary.get("pubdate", "").strip()
 
 
+def on_topic_re(topic):
+    """The day's title words, each at the start of a word ("mental" must not match "supplemental")."""
+    return re.compile(r"\b(?:" + topic["title_words"] + ")", re.I)
+
+
 def eligible(result, pmids, on_topic):
     """Papers in the order of pmids that pass the post rules (the day's topic in the title, an abstract, English, fits)."""
     papers = []
@@ -161,7 +166,7 @@ def candidates(cfg, topic, blocked):
     if not ids:
         return []
     result = eutils("esummary.fcgi", {"db": "pubmed", "id": ",".join(ids)})["result"]
-    return eligible(result, result.get("uids", []), re.compile(topic["title_words"], re.I))
+    return eligible(result, result.get("uids", []), on_topic_re(topic))
 
 
 def find_papers(cfg, topic, today, blocked):
@@ -465,6 +470,12 @@ def main():
     if any(s["date"] == today.isoformat() for s in state["posts"]):
         print("already posted today")
         return 0
+    if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and not args.date:
+        start, end = cfg["post_window_utc"]
+        now = dt.datetime.now(dt.timezone.utc).strftime("%H:%M")
+        if not start <= now < end:
+            print(f"scheduled run at {now} UTC, outside the post window {start}-{end} UTC: nothing posted")
+            return 0
     posts, papers, count = build_thread(cfg, today, blocked)
     show(today, posts, papers, count)
     if not posts:
