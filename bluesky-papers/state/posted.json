@@ -71,6 +71,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz6iu7x2yk2p",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mz6iubc7bq2b"
    ]
+  },
+  {
+   "date": "2026-11-01",
+   "topic": "mental health",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mzazbdblz72p",
+   "papers": [
+    {
+     "title": "Single Intranasal Administration of the Psychedelic Mebufotenin for Treatment-Resistant Depression: A Randomized Clinical Trial.",
+     "journal": "JAMA",
+     "date": "26 Oct 2026",
+     "link": "https://doi.org/10.1001/jama.2026.18380"
+    },
+    {
+     "title": "Small Area Deprivation and Depression or Anxiety in a Nationwide Cohort.",
+     "journal": "JAMA Netw Open",
+     "date": "1 Oct 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.41218"
+    },
+    {
+     "title": "Air versus supplemental oxygen for resuscitation of term or late preterm infants at birth.",
+     "journal": "Cochrane Database Syst Rev",
+     "date": "27 Oct 2026",
+     "link": "https://doi.org/10.1002/14651858.CD014781.pub2"
+    }
+   ],
+   "pmids": [
+    "42931733",
+    "42961419",
+    "42937251"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzazbdblz72p",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzazbehugn2b",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzazbfsbzg2g",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzazbgyyd72p"
+   ]
   }
  ]
 }
