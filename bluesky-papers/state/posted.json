@@ -107,6 +107,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzazbfsbzg2g",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzazbgyyd72p"
    ]
+  },
+  {
+   "date": "2026-11-02",
+   "topic": "cardiology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mzdwilxhwl2b",
+   "papers": [
+    {
+     "title": "Great debate: a dual biomarker strategy improves the triage of patients with suspected acute coronary syndrome.",
+     "journal": "Eur Heart J",
+     "date": "29 Oct 2026",
+     "link": "https://doi.org/10.1093/eurheartj/ehag090"
+    },
+    {
+     "title": "N-Acetylgalactosamine-Conjugated Small Interfering RNA Targeting Hepatic Angiotensinogen in Hypertension: A Phase I Clinical Trial With Randomized Part A and Open-Label Part B.",
+     "journal": "JAMA Cardiol",
+     "date": "30 Oct 2026",
+     "link": "https://doi.org/10.1001/jamacardio.2026.4936"
+    },
+    {
+     "title": "Interpreting High-Sensitivity Cardiac Troponin in Clinical Practice and Emerging Directions: Detection Is No Longer Diagnosis.",
+     "journal": "J Am Coll Cardiol",
+     "date": "28 Oct 2026",
+     "link": "https://doi.org/10.1016/j.jacc.2026.09.019"
+    }
+   ],
+   "pmids": [
+    "42954950",
+    "42961436",
+    "42949674"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzdwilxhwl2b",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzdwinchf22y",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzdwioefps2g",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzdwipkmyd25"
+   ]
   }
  ]
 }
