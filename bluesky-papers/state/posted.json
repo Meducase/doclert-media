@@ -143,6 +143,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzdwioefps2g",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzdwipkmyd25"
    ]
+  },
+  {
+   "date": "2026-11-03",
+   "topic": "oncology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mzg7ybli262f",
+   "papers": [
+    {
+     "title": "A sex-specific platelet switch controls anti-tumor immunity in glioblastoma.",
+     "journal": "Cancer Cell",
+     "date": "29 Oct 2026",
+     "link": "https://doi.org/10.1016/j.ccell.2026.10.004"
+    },
+    {
+     "title": "Therapy for Stage IV Non-Small Cell Lung Cancer With Driver Alterations: ASCO Living Guideline, Version 2026.3.4.",
+     "journal": "J Clin Oncol",
+     "date": "29 Oct 2026",
+     "link": "https://doi.org/10.1200/JCO-26-02597"
+    },
+    {
+     "title": "Exercise Training During Neoadjuvant Treatment for Gastroesophageal Cancer and Tumor Surgery: A Randomized Clinical Trial.",
+     "journal": "JAMA Netw Open",
+     "date": "1 Oct 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.40136"
+    }
+   ],
+   "pmids": [
+    "42956742",
+    "42956324",
+    "42949746"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzg7ybli262f",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzg7ycwevb2a",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzg7ye4yn42y",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzg7yfdgm22y"
+   ]
   }
  ]
 }
