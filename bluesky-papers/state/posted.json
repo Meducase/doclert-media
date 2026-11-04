@@ -179,6 +179,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzg7ye4yn42y",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzg7yfdgm22y"
    ]
+  },
+  {
+   "date": "2026-11-04",
+   "topic": "infectious diseases",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mziqodeb7h22",
+   "papers": [
+    {
+     "title": "Managing Small Intestinal Bacterial Overgrowth in Pediatric Short Bowel Syndrome: A Consensus Statement.",
+     "journal": "JAMA Netw Open",
+     "date": "2 Nov 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.41939"
+    },
+    {
+     "title": "Are Higher-Order Carbapenems Effective Therapy for Patients with Ertapenem-Resistant Enterobacterales Invasive Infections?",
+     "journal": "Clin Infect Dis",
+     "date": "3 Nov 2026",
+     "link": "https://doi.org/10.1093/cid/ciag696"
+    },
+    {
+     "title": "Novel dengue serotype 4 live virus human challenge: a phase 1 dose optimisation and homologous rechallenge study.",
+     "journal": "Lancet Microbe",
+     "date": "29 Oct 2026",
+     "link": "https://doi.org/10.1016/j.lanmic.2026.101542"
+    }
+   ],
+   "pmids": [
+    "42975907",
+    "42974756",
+    "42956783"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mziqodeb7h22",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mziqoeqlbk25",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mziqofy7ss2b",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mziqoha2tu2g"
+   ]
   }
  ]
 }
