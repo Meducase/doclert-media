@@ -215,6 +215,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mziqofy7ss2b",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mziqoha2tu2g"
    ]
+  },
+  {
+   "date": "2026-11-05",
+   "topic": "diabetes and endocrinology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mzlbsd47qb2z",
+   "papers": [
+    {
+     "title": "Clinical and metabolic subtypes of recent-onset adult type 1 diabetes: a prospective cohort study.",
+     "journal": "Lancet Diabetes Endocrinol",
+     "date": "30 Oct 2026",
+     "link": "https://doi.org/10.1016/S2213-8587(26)00233-0"
+    },
+    {
+     "title": "In adults with diabetes and risk for HF, an NT-proBNP-based screening strategy vs. usual care increased diagnostic yield for HF at 6 mo.",
+     "journal": "Ann Intern Med",
+     "date": "3 Nov 2026",
+     "link": "https://doi.org/10.7326/ANNALS-26-04073-JC"
+    },
+    {
+     "title": "Short and long-term outcomes after gestational diabetes diagnosis using different glycemic criteria: a systematic review and meta-analysis.",
+     "journal": "J Clin Endocrinol Metab",
+     "date": "30 Oct 2026",
+     "link": "https://doi.org/10.1210/clinem/dgag448"
+    }
+   ],
+   "pmids": [
+    "42962686",
+    "42970806",
+    "42961956"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzlbsd47qb2z",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzlbse7wpq25",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzlbsffb7t2y",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzlbsgiqxl2y"
+   ]
   }
  ]
 }
