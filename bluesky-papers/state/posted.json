@@ -251,6 +251,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzlbsffb7t2y",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzlbsgiqxl2y"
    ]
+  },
+  {
+   "date": "2026-11-06",
+   "topic": "neurology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mznqhtvtez2d",
+   "papers": [
+    {
+     "title": "Maternal and Fetal Safety Outcomes of Thrombolytics for Ischemic Stroke in Pregnancy: A Systematic Review and Aggregated Case Series.",
+     "journal": "Neurology",
+     "date": "30 Oct 2026",
+     "link": "https://doi.org/10.1212/WNL.0000000000218590"
+    },
+    {
+     "title": "Intravenous Thrombolysis for Acute Ischemic Stroke - New Directions.",
+     "journal": "N Engl J Med",
+     "date": "5 Nov 2026",
+     "link": "https://doi.org/10.1056/NEJMra2519017"
+    },
+    {
+     "title": "Spousal Traumatic Brain Injury and Risk of Mortality, Dementia, and Cardiovascular Events.",
+     "journal": "JAMA Netw Open",
+     "date": "2 Nov 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.41851"
+    }
+   ],
+   "pmids": [
+    "42962168",
+    "42981570",
+    "42975900"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mznqhtvtez2d",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mznqhvgf4d2q",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mznqhwocfp2k",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mznqhxvhfl26"
+   ]
   }
  ]
 }
