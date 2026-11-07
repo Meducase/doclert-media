@@ -287,6 +287,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mznqhwocfp2k",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mznqhxvhfl26"
    ]
+  },
+  {
+   "date": "2026-11-07",
+   "topic": "paediatrics",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mzq5ivbi4y2k",
+   "papers": [
+    {
+     "title": "Low-Level Pyuria and Antibiotic Prescribing for Suspected Urinary Tract Infection in Children.",
+     "journal": "Pediatrics",
+     "date": "5 Nov 2026",
+     "link": "https://doi.org/10.1542/peds.2026-077011"
+    },
+    {
+     "title": "Chest physiotherapy for pneumonia in children.",
+     "journal": "Cochrane Database Syst Rev",
+     "date": "6 Nov 2026",
+     "link": "https://doi.org/10.1002/14651858.CD010277.pub4"
+    },
+    {
+     "title": "Perioperative respiratory adverse events in children undergoing adenotonsillectomy with laryngeal mask airway versus endotracheal tube ventilation: multicentre, randomised controlled trial.",
+     "journal": "BMJ",
+     "date": "4 Nov 2026",
+     "link": "https://doi.org/10.1136/bmj-2026-101019"
+    }
+   ],
+   "pmids": [
+    "42982088",
+    "42992515",
+    "42982504"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzq5ivbi4y2k",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzq5iwmtgg2l",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzq5ixuaux2p",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzq5izb7fp24"
+   ]
   }
  ]
 }
