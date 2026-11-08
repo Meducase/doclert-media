@@ -323,6 +323,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzq5ixuaux2p",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzq5izb7fp24"
    ]
+  },
+  {
+   "date": "2026-11-08",
+   "topic": "mental health",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mzsoq6xiqa2r",
+   "papers": [
+    {
+     "title": "RELAX Perinatal Digital Intervention to Prevent Increasing Anxiety: A Randomized Clinical Trial.",
+     "journal": "JAMA Netw Open",
+     "date": "2 Nov 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.40518"
+    },
+    {
+     "title": "Eating disorders.",
+     "journal": "Lancet",
+     "date": "5 Nov 2026",
+     "link": "https://doi.org/10.1016/S0140-6736(26)01326-7"
+    },
+    {
+     "title": "Claustrum Transcriptome Alterations in Schizophrenia.",
+     "journal": "JAMA Psychiatry",
+     "date": "4 Nov 2026",
+     "link": "https://doi.org/10.1001/jamapsychiatry.2026.3604"
+    }
+   ],
+   "pmids": [
+    "42981096",
+    "42987891",
+    "42981062"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzsoq6xiqa2r",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzsoqa6ztr24",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzsoqbg4s72d",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzsoqcnhzk2n"
+   ]
   }
  ]
 }
