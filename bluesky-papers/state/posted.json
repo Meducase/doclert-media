@@ -359,6 +359,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzsoqbg4s72d",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzsoqcnhzk2n"
    ]
+  },
+  {
+   "date": "2026-11-09",
+   "topic": "cardiology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mzvldefqp42b",
+   "papers": [
+    {
+     "title": "Effects of semaglutide on cardiac structure and function in heart failure with preserved ejection fraction and obesity: a pre-specified cardiac magnetic resonance substudy of the CAMEO-SEMA trial.",
+     "journal": "Nat Med",
+     "date": "8 Nov 2026",
+     "link": "https://doi.org/10.1038/s41591-026-04787-8"
+    },
+    {
+     "title": "Implementation of Single-Pill Combination Therapy Through Team-Based Care for Hypertension Control in Resource-Constrained Settings: A Cluster Randomized Clinical Trial.",
+     "journal": "JAMA",
+     "date": "8 Nov 2026",
+     "link": "https://doi.org/10.1001/jama.2026.24169"
+    },
+    {
+     "title": "Statin-Ezetimibe Combination Therapy versus Statin Monotherapy in Atherosclerotic Cardiovascular Disease: A Prespecified Secondary Analysis of the Randomized Ez-PAVE Trial.",
+     "journal": "Circulation",
+     "date": "7 Nov 2026",
+     "link": "https://doi.org/10.1161/CIRCULATIONAHA.126.083811"
+    }
+   ],
+   "pmids": [
+    "43000112",
+    "43000001",
+    "42998308"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzvldefqp42b",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzvldfqxlh2l",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzvldh7nja2h",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzvldihpv52f"
+   ]
   }
  ]
 }
