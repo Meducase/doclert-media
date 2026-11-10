@@ -395,6 +395,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzvldh7nja2h",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzvldihpv52f"
    ]
+  },
+  {
+   "date": "2026-11-10",
+   "topic": "oncology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3mzxu2j4u6d2i",
+   "papers": [
+    {
+     "title": "A stroma-sensing TGF-\u03b2 blockade reprograms CAF-myeloid niches to induce durable tumor immunity.",
+     "journal": "Cancer Cell",
+     "date": "9 Nov 2026",
+     "link": "https://doi.org/10.1016/j.ccell.2026.10.007"
+    },
+    {
+     "title": "Circulating Tumor DNA Profiling Across Phase II/III Ewing Sarcoma Trials Identifies High-Risk Patients With TP53, STAG2, and CDKN2A Alterations.",
+     "journal": "J Clin Oncol",
+     "date": "4 Nov 2026",
+     "link": "https://doi.org/10.1200/JCO-26-00280"
+    },
+    {
+     "title": "Emerging strategies for paediatric cancer predisposition: detection, surveillance and prevention.",
+     "journal": "Nat Rev Clin Oncol",
+     "date": "6 Nov 2026",
+     "link": "https://doi.org/10.1038/s41571-026-01217-z"
+    }
+   ],
+   "pmids": [
+    "43003077",
+    "42981545",
+    "42995217"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzxu2j4u6d2i",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzxu2kdkgs2l",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzxu2li54e2v",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzxu2msaz32i"
+   ]
   }
  ]
 }
