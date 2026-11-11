@@ -431,6 +431,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzxu2li54e2v",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3mzxu2msaz32i"
    ]
+  },
+  {
+   "date": "2026-11-11",
+   "topic": "infectious diseases",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n22diiyq6l2n",
+   "papers": [
+    {
+     "title": "Combination antiviral treatment for a patient with lymphocytic choriomeningitis virus meningoencephalitis associated with bispecific antibody teclistamab therapy for myeloma.",
+     "journal": "Lancet Infect Dis",
+     "date": "5 Nov 2026",
+     "link": "https://doi.org/10.1016/S1473-3099(26)00479-2"
+    },
+    {
+     "title": "HIV, obesity, and stigma: lessons for programmes, policy, and practice.",
+     "journal": "Lancet HIV",
+     "date": "8 Nov 2026",
+     "link": "https://doi.org/10.1016/S2352-3018(26)00236-5"
+    },
+    {
+     "title": "Testing the 40% to 60% Influenza Vaccine Effectiveness Heuristic: A Meta-Analysis.",
+     "journal": "JAMA Netw Open",
+     "date": "2 Nov 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.42906"
+    }
+   ],
+   "pmids": [
+    "42987888",
+    "43000039",
+    "43007678"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n22diiyq6l2n",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n22dik7agj2i",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n22dilfab42a",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n22dimhmfq2g"
+   ]
   }
  ]
 }
