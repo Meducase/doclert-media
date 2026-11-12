@@ -467,6 +467,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n22dilfab42a",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n22dimhmfq2g"
    ]
+  },
+  {
+   "date": "2026-11-12",
+   "topic": "diabetes and endocrinology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n24wbj5m4i2d",
+   "papers": [
+    {
+     "title": "Clinical Guidance for Disease-Modifying Immunotherapy in Children and Adolescents With New-Onset (Stage 3) Type 1 Diabetes.",
+     "journal": "Diabetes Care",
+     "date": "11 Nov 2026",
+     "link": "https://doi.org/10.2337/dci26-0061"
+    },
+    {
+     "title": "Hemodynamic effects of semaglutide in individuals with heart failure with preserved ejection fraction and obesity: a placebo-controlled randomized clinical trial.",
+     "journal": "Nat Med",
+     "date": "8 Nov 2026",
+     "link": "https://doi.org/10.1038/s41591-026-04762-3"
+    },
+    {
+     "title": "Intensive Blood-Pressure Lowering in Patients with Type 2 Diabetes.",
+     "journal": "N Engl J Med",
+     "date": "7 Nov 2026",
+     "link": "https://doi.org/10.1056/NEJMoa2612922"
+    }
+   ],
+   "pmids": [
+    "43012423",
+    "43000472",
+    "43001746"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n24wbj5m4i2d",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n24wbkf4hq25",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n24wbln3vk2o",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n24wbmttbo2j"
+   ]
   }
  ]
 }
