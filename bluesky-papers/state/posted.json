@@ -503,6 +503,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n24wbln3vk2o",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n24wbmttbo2j"
    ]
+  },
+  {
+   "date": "2026-11-13",
+   "topic": "neurology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n27euvj6uq25",
+   "papers": [
+    {
+     "title": "Severity-Based Triage for Direct Transportation to Nearest Comprehensive Stroke Center: A Systematic Review and Meta-Analysis.",
+     "journal": "Neurology",
+     "date": "10 Nov 2026",
+     "link": "https://doi.org/10.1212/WNL.0000000000218473"
+    },
+    {
+     "title": "Effect of intensive blood pressure control on cognitive outcomes and brain structures in adults with type 2 diabetes: prespecified analysis of secondary outcomes of BPROAD randomised controlled trial.",
+     "journal": "BMJ",
+     "date": "12 Nov 2026",
+     "link": "https://doi.org/10.1136/bmj-2026-101209"
+    },
+    {
+     "title": "Insight discordance differentiates behavioural variant frontotemporal dementia from false positives.",
+     "journal": "Brain",
+     "date": "11 Nov 2026",
+     "link": "https://doi.org/10.1093/brain/awag394"
+    }
+   ],
+   "pmids": [
+    "43008260",
+    "43020520",
+    "43017809"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n27euvj6uq25",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n27euwmc2h2u",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n27euxqbfn2c",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n27euytdi32o"
+   ]
   }
  ]
 }
