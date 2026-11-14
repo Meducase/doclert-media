@@ -539,6 +539,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n27euxqbfn2c",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n27euytdi32o"
    ]
+  },
+  {
+   "date": "2026-11-14",
+   "topic": "paediatrics",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n2br6rham72g",
+   "papers": [
+    {
+     "title": "Empirical tuberculosis treatment in infants living with HIV hospitalised with severe pneumonia in Africa (EMPIRICAL): a multicentre, randomised, open-label, 2 \u00d7 2 factorial, controlled superiority trial.",
+     "journal": "Lancet",
+     "date": "14 Nov 2026",
+     "link": "https://doi.org/10.1016/S0140-6736(26)01418-2"
+    },
+    {
+     "title": "Procalcitonin- and Presepsin-Guided Antibiotics for Early-Onset Sepsis in Preterm Infants: A Randomized Clinical Trial.",
+     "journal": "JAMA Netw Open",
+     "date": "2 Nov 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.43418"
+    },
+    {
+     "title": "Incidence and predictors of suboptimal functional outcomes despite successful reperfusion in paediatric stroke: a cohort study from the Save ChildS Pro registry.",
+     "journal": "Lancet Child Adolesc Health",
+     "date": "10 Nov 2026",
+     "link": "https://doi.org/10.1016/S2352-4642(26)00240-3"
+    }
+   ],
+   "pmids": [
+    "43020097",
+    "43018973",
+    "43008757"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2br6rham72g",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2br6sr5af2c",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2br6uapcs2m",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2br6vec662k"
+   ]
   }
  ]
 }
