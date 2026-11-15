@@ -575,6 +575,34 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2br6uapcs2m",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2br6vec662k"
    ]
+  },
+  {
+   "date": "2026-11-15",
+   "topic": "mental health",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n2edrgjc2e2p",
+   "papers": [
+    {
+     "title": "Eating Disorders in Individuals With Celiac Disease and Their Biological First-Degree Relatives.",
+     "journal": "JAMA Netw Open",
+     "date": "2 Nov 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.43815"
+    },
+    {
+     "title": "Youth-Caregiver Discordance in Psychiatric Diagnosis and Clinical Problems in the ABCD Study.",
+     "journal": "JAMA Psychiatry",
+     "date": "11 Nov 2026",
+     "link": "https://doi.org/10.1001/jamapsychiatry.2026.3768"
+    }
+   ],
+   "pmids": [
+    "43018970",
+    "43013283"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2edrgjc2e2p",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2edrhr7iw24",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2edrivkau2f"
+   ]
   }
  ]
 }
