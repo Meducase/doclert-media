@@ -603,6 +603,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2edrhr7iw24",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2edrivkau2f"
    ]
+  },
+  {
+   "date": "2026-11-16",
+   "topic": "cardiology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n2h5m6p2dw2t",
+   "papers": [
+    {
+     "title": "Left Atrial Appendage Closure or Anticoagulation for Atrial Fibrillation: Navigating Heterogeneity in Clinical Evidence: JACC Evidence Review.",
+     "journal": "J Am Coll Cardiol",
+     "date": "12 Nov 2026",
+     "link": "https://doi.org/10.1016/j.jacc.2026.09.018"
+    },
+    {
+     "title": "Cardiovascular Health Promotion for US Veterans: Current State, Gaps, and Strategies: A Scientific Statement From the American Heart Association.",
+     "journal": "Circulation",
+     "date": "11 Nov 2026",
+     "link": "https://doi.org/10.1161/CIR.0000000000001452"
+    },
+    {
+     "title": "Sacubitril/valsartan for radiation-induced heart disease in children: preclinical and clinical findings.",
+     "journal": "Eur Heart J",
+     "date": "10 Nov 2026",
+     "link": "https://doi.org/10.1093/eurheartj/ehag873"
+    }
+   ],
+   "pmids": [
+    "43018506",
+    "43012109",
+    "43004603"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2h5m6p2dw2t",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2h5m7sk3o2t",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2h5maxvrp24",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2h5mc5a3f2t"
+   ]
   }
  ]
 }
