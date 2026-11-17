@@ -639,6 +639,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2h5maxvrp24",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2h5mc5a3f2t"
    ]
+  },
+  {
+   "date": "2026-11-17",
+   "topic": "oncology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n2jlc2zn6d2b",
+   "papers": [
+    {
+     "title": "Circulating tumor DNA to direct adjuvant immunotherapy across mismatch repair-deficient solid tumors.",
+     "journal": "Ann Oncol",
+     "date": "13 Nov 2026",
+     "link": "https://doi.org/10.1016/j.annonc.2026.11.005"
+    },
+    {
+     "title": "Antibiotics counteracting tumor-promoting dysbiosis in colorectal cancer.",
+     "journal": "Cancer Cell",
+     "date": "13 Nov 2026",
+     "link": "https://doi.org/10.1016/j.ccell.2026.10.013"
+    },
+    {
+     "title": "Treatment of Recurrent and/or Metastatic Nasopharyngeal Carcinoma: CSCO and ASCO Joint Guideline.",
+     "journal": "J Clin Oncol",
+     "date": "10 Nov 2026",
+     "link": "https://doi.org/10.1200/JCO-26-02650"
+    }
+   ],
+   "pmids": [
+    "43025593",
+    "43025423",
+    "43008245"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2jlc2zn6d2b",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2jlc4kaux2p",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2jlc5qqyl2w",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2jlc6wk5n2b"
+   ]
   }
  ]
 }
