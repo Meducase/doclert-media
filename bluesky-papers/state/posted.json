@@ -675,6 +675,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2jlc5qqyl2w",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2jlc6wk5n2b"
    ]
+  },
+  {
+   "date": "2026-11-18",
+   "topic": "infectious diseases",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n2m2htmz6j2s",
+   "papers": [
+    {
+     "title": "Preventing Malaria Infections and Moving toward Malaria Elimination.",
+     "journal": "N Engl J Med",
+     "date": "12 Nov 2026",
+     "link": "https://doi.org/10.1056/NEJMra2508563"
+    },
+    {
+     "title": "People With Influenza Requiring ICU Admission During the 2025-2026 Season, Marked by the Emergence of Influenza A(H3N2) Subclade K: A French Prospective Nationwide Cohort Study.",
+     "journal": "Clin Infect Dis",
+     "date": "11 Nov 2026",
+     "link": "https://doi.org/10.1093/cid/ciag648"
+    },
+    {
+     "title": "Estimation of mRNA-1283 vs BNT162b2 COVID-19 Vaccine Effectiveness in Older US Veterans.",
+     "journal": "JAMA Netw Open",
+     "date": "2 Nov 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.44727"
+    }
+   ],
+   "pmids": [
+    "43013819",
+    "43012657",
+    "43013304"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2m2htmz6j2s",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2m2hupisb2b",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2m2hvrx6w24",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2m2hwuavb2s"
+   ]
   }
  ]
 }
