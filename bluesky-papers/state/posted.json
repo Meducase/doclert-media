@@ -711,6 +711,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2m2hvrx6w24",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2m2hwuavb2s"
    ]
+  },
+  {
+   "date": "2026-11-19",
+   "topic": "diabetes and endocrinology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n2oleiuckl2a",
+   "papers": [
+    {
+     "title": "It's All One Trial: a continuous master-protocol framework to accelerate development and confirmation of disease-modifying therapies for type 1 diabetes.",
+     "journal": "Diabetologia",
+     "date": "12 Nov 2026",
+     "link": "https://doi.org/10.1007/s00125-026-06915-y"
+    },
+    {
+     "title": "Serum 25(OH)D and diabetes risk in adults with prediabetes: evidence, potential mechanisms, and implications.",
+     "journal": "J Clin Endocrinol Metab",
+     "date": "12 Nov 2026",
+     "link": "https://doi.org/10.1210/clinem/dgag460"
+    },
+    {
+     "title": "Food Insecurity Patterns and Risk of Poor Glycemic Control, Acute Complications of Diabetes, and Ability to Obtain Diabetes Technologies in Youth and Young Adults With Youth-Onset Type 1 Diabetes.",
+     "journal": "Diabetes Care",
+     "date": "18 Nov 2026",
+     "link": "https://doi.org/10.2337/dc26-1885"
+    }
+   ],
+   "pmids": [
+    "43018734",
+    "43017908",
+    "43049685"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2oleiuckl2a",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2olek5ppl2t",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2olelbmh72s",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2olemeqhd2w"
+   ]
   }
  ]
 }
