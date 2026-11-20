@@ -747,6 +747,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2olelbmh72s",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2olemeqhd2w"
    ]
+  },
+  {
+   "date": "2026-11-20",
+   "topic": "neurology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n2r2jjgyhi24",
+   "papers": [
+    {
+     "title": "Robustness of Plasma P-Tau217 Diagnostic Thresholds for Alzheimer Disease Across Various Clinical Populations and Laboratory Environments.",
+     "journal": "Neurology",
+     "date": "16 Nov 2026",
+     "link": "https://doi.org/10.1212/WNL.0000000000218784"
+    },
+    {
+     "title": "Hypersensitivity to adrenomedullin in post-traumatic headache: a randomized crossover study.",
+     "journal": "Brain",
+     "date": "13 Nov 2026",
+     "link": "https://doi.org/10.1093/brain/awag401"
+    },
+    {
+     "title": "Blood-Based Biomarker Testing for Alzheimer Disease in US Clinical Practice.",
+     "journal": "JAMA",
+     "date": "18 Nov 2026",
+     "link": "https://doi.org/10.1001/jama.2026.23534"
+    }
+   ],
+   "pmids": [
+    "43038487",
+    "43021468",
+    "43050206"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2r2jjgyhi24",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2r2jkogrn2t",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2r2jlwlfq2s",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2r2jn77ip2t"
+   ]
   }
  ]
 }
