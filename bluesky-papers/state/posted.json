@@ -783,6 +783,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2r2jlwlfq2s",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2r2jn77ip2t"
    ]
+  },
+  {
+   "date": "2026-11-21",
+   "topic": "paediatrics",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n2ti6xb4bj2f",
+   "papers": [
+    {
+     "title": "Prehospital Trauma Compendium: Prehospital Management of Pediatric Traumatic Out-of-Hospital Circulatory Arrest - A Joint Position Statement and Resource Document of NAEMSP, ACS-COT, ACEP, and AAP.",
+     "journal": "Pediatrics",
+     "date": "19 Nov 2026",
+     "link": "https://doi.org/10.1542/peds.2026-079371"
+    },
+    {
+     "title": "Semaglutide for the Treatment of Obesity in Children 6 to <12 Years of Age.",
+     "journal": "N Engl J Med",
+     "date": "16 Nov 2026",
+     "link": "https://doi.org/10.1056/NEJMoa2604058"
+    },
+    {
+     "title": "Bystander CPR Type and Outcomes After Pediatric Out-of-Hospital Cardiac Arrest.",
+     "journal": "JAMA Netw Open",
+     "date": "2 Nov 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.44991"
+    }
+   ],
+   "pmids": [
+    "43051248",
+    "43037562",
+    "43056114"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2ti6xb4bj2f",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2ti6yed4p24",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2ti6zpokh2p",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2ti72ynhm2w"
+   ]
   }
  ]
 }
