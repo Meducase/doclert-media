@@ -855,6 +855,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2vyzag3ir2s",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n2vyzbnfcr2s"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "topic": "oncology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n33evsj4ty26",
+   "papers": [
+    {
+     "title": "Reach of State-Mandated Insurance Coverage for Fertility Preservation in Patients With Cancer.",
+     "journal": "J Clin Oncol",
+     "date": "20 Nov 2026",
+     "link": "https://doi.org/10.1200/JCO-26-01296"
+    },
+    {
+     "title": "Blood-based tests to screen for multiple cancers in adults.",
+     "journal": "Cochrane Database Syst Rev",
+     "date": "18 Nov 2026",
+     "link": "https://doi.org/10.1002/14651858.CD016235"
+    },
+    {
+     "title": "Screening for Prostate Cancer : A Systematic Review and Meta-analysis.",
+     "journal": "Ann Intern Med",
+     "date": "24 Nov 2026",
+     "link": "https://doi.org/10.7326/ANNALS-26-02921"
+    }
+   ],
+   "pmids": [
+    "43063371",
+    "43049190",
+    "43071965"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n33evsj4ty26",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n33evtsd7i26",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n33evuw6k52b",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n33evvzgly22"
+   ]
   }
  ]
 }
