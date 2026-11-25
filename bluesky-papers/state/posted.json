@@ -891,6 +891,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n33evuw6k52b",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n33evvzgly22"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "topic": "infectious diseases",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n35sjb3l3b2x",
+   "papers": [
+    {
+     "title": "Seasonal mass vaccination with R21/Matrix-M against malaria in The Gambia and Burkina Faso: an open-label, cluster-randomised, controlled trial.",
+     "journal": "Lancet",
+     "date": "19 Nov 2026",
+     "link": "https://doi.org/10.1016/S0140-6736(26)01562-X"
+    },
+    {
+     "title": "Prehospital Fluid Resuscitation for Patients With Suspected Sepsis: The PITSTOP-Fluids Factorial Randomized Clinical Trial.",
+     "journal": "JAMA",
+     "date": "24 Nov 2026",
+     "link": "https://doi.org/10.1001/jama.2026.25614"
+    },
+    {
+     "title": "Safety and immunogenicity of a trivalent vaccine candidate against invasive non-typhoidal Salmonella disease and typhoid fever in healthy adults in Europe and Africa: a phase 1/2a randomised controlled trial.",
+     "journal": "Lancet Infect Dis",
+     "date": "23 Nov 2026",
+     "link": "https://doi.org/10.1016/S1473-3099(26)00527-X"
+    }
+   ],
+   "pmids": [
+    "43057277",
+    "43076208",
+    "43072397"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n35sjb3l3b2x",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n35sjccdhx2h",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n35sjdoxzd2c",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n35sjfagzg2b"
+   ]
   }
  ]
 }
