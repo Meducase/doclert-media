@@ -927,6 +927,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n35sjdoxzd2c",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n35sjfagzg2b"
    ]
+  },
+  {
+   "date": "2026-11-26",
+   "topic": "diabetes and endocrinology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n3ac5rgkwj24",
+   "papers": [
+    {
+     "title": "The Effect of a Diabetes-Educated Psychologist on HbA1c and Diabetes Distress in Adults With Type 1 Diabetes: A Multicenter, Open-Label, Randomized Controlled Trial.",
+     "journal": "Diabetes Care",
+     "date": "20 Nov 2026",
+     "link": "https://doi.org/10.2337/dc26-1843"
+    },
+    {
+     "title": "Physiologic subtypes of gestational glucose intolerance and risk of future maternal prediabetes or diabetes.",
+     "journal": "J Clin Endocrinol Metab",
+     "date": "21 Nov 2026",
+     "link": "https://doi.org/10.1210/clinem/dgag470"
+    },
+    {
+     "title": "The role of sex in explaining the heterogeneity of type 1 diabetes.",
+     "journal": "Diabetologia",
+     "date": "18 Nov 2026",
+     "link": "https://doi.org/10.1007/s00125-026-06927-8"
+    }
+   ],
+   "pmids": [
+    "43062372",
+    "43065309",
+    "43052479"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3ac5rgkwj24",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3ac5snvwa2h",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3ac5u3irm2g",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3ac5vevsu2h"
+   ]
   }
  ]
 }
