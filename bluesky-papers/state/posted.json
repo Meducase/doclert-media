@@ -963,6 +963,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3ac5u3irm2g",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3ac5vevsu2h"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "topic": "neurology",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n3crs4e2kg2c",
+   "papers": [
+    {
+     "title": "MobilityAPP: A Randomized Controlled Trial Evaluating Gait-Focused Physiotherapy in Parkinson Disease and Atypical Parkinsonian Syndromes.",
+     "journal": "Neurology",
+     "date": "24 Nov 2026",
+     "link": "https://doi.org/10.1212/WNL.0000000000218585"
+    },
+    {
+     "title": "Longitudinal trajectories of plasma biomarkers, amyloid-\u03b2 burden and cognitive decline in Alzheimer's disease.",
+     "journal": "Brain",
+     "date": "26 Nov 2026",
+     "link": "https://doi.org/10.1093/brain/awag418"
+    },
+    {
+     "title": "Clinical Impairment in Advanced Alzheimer's (High Alzheimer's Disease Neuropathological Change) Correlates with Quantitative Neurofibrillary Tangle Measures and Co-pathologies.",
+     "journal": "Ann Neurol",
+     "date": "24 Nov 2026",
+     "link": "https://doi.org/10.1002/ana.78409"
+    }
+   ],
+   "pmids": [
+    "43077650",
+    "43094361",
+    "43080111"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3crs4e2kg2c",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3crs5jvig2c",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3crs6w2se2g",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3crsa3arh2b"
+   ]
   }
  ]
 }
