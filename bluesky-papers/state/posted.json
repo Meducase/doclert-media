@@ -999,6 +999,42 @@
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3crs6w2se2g",
     "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3crsa3arh2b"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "topic": "paediatrics",
+   "thread": "https://bsky.app/profile/doclert.bsky.social/post/3n3f5ufvsra2c",
+   "papers": [
+    {
+     "title": "Intramuscular Olanzapine or Droperidol for Acute Behavioral Disturbance in Children and Adolescents: The PEAChY-M Randomized Clinical Trial.",
+     "journal": "JAMA",
+     "date": "23 Nov 2026",
+     "link": "https://doi.org/10.1001/jama.2026.25561"
+    },
+    {
+     "title": "Ocular Screening in Children With Juvenile Idiopathic Arthritis or Treated With Hydroxychloroquine: Clinical Report.",
+     "journal": "Pediatrics",
+     "date": "23 Nov 2026",
+     "link": "https://doi.org/10.1542/peds.2026-079383"
+    },
+    {
+     "title": "Food Insecurity During Pregnancy and Child Neurodevelopmental Outcomes.",
+     "journal": "JAMA Netw Open",
+     "date": "2 Nov 2026",
+     "link": "https://doi.org/10.1001/jamanetworkopen.2026.46107"
+    }
+   ],
+   "pmids": [
+    "43072799",
+    "43068708",
+    "43084299"
+   ],
+   "uris": [
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3f5ufvsra2c",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3f5uh2sea2c",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3f5ui7scl2x",
+    "at://did:plc:tgfjpptwasw3mq244hncklxp/app.bsky.feed.post/3n3f5ujh7f22q"
+   ]
   }
  ]
 }
